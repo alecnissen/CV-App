@@ -34,3 +34,12 @@
 // you will need to pass data from one component to another, 
 
 // see if you can do that now, 
+// grab the target of the input field and set its state. 
+
+// ok I did a basic test passing data/props from one component to another 
+
+// next I will create all the components with its content inside, 
+
+// create the input components then the CV/Resume on the right hand side 
+
+
