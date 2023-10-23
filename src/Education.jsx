@@ -10,14 +10,16 @@ export default function Education() {
         <label>Degree:</label>
         <input></input>
         <label>Start Date:</label>
-        <input></input>
+        <input type="date"></input>
         <label>End Date:</label>
-        <input></input>
+        <input type="date"></input>
         <label>Location:</label>
         <input></input>
+        <div className="education-btns-container">
+          <button>Submit</button>
+          <button>Edit</button>
+        </div>
       </div>
-      <button>Submit</button>
-      <button>Edit</button>
     </>
   );
 }

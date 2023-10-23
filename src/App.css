@@ -1,6 +1,18 @@
+
+  #root { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}  
+
+/* .main-header-container { 
+    /* grid-column-start: 1; */
+    /* text-align: center; */
+/* } */
+
 .personal-details-container { 
     display: flex;
     flex-direction: column;
+    grid-column-start: 1;
 }
 
 .personal-details-container input { 
@@ -11,9 +23,33 @@
 .education-form-container { 
     display: flex;
     flex-direction: column;
+    grid-column-start: 1;
 } 
 
 .education-form-container input { 
     width: min(15em);
     font-size: 1rem;
+} 
+
+.professional-experience-form-container { 
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+} 
+
+.professional-experience-form-container textarea { 
+    width: min(20em);
+    font-size: 1rem;
+} 
+
+.professional-experience-form-container input { 
+    width: min(15em);
+    font-size: 1rem;
+} 
+
+.CV-component-container { 
+    grid-column-start: 2;
+    text-align: center;
 }
+
+

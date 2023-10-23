@@ -43,3 +43,26 @@
 // create the input components then the CV/Resume on the right hand side 
 
 
+
+// try to move the cv component to the right hand side of the page, 
+// I think it can be achieved with grid, 
+// I will need to review the old messages, 
+
+// seems to be a problem with the children and grid items. 
+
+
+// maybe this can be achieved with flex??? 
+// flex container? 
+
+
+// I will go through the components, and make sure everything looks good, 
+
+// then commit, save then take a short break 
+
+// the next step will be when the user fills in their info, 
+// presses submit, the props will get based to cv component
+// and it will display that info the appropriate section, 
+
+// that will be the process for each component, 
+
+
