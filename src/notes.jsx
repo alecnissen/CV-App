@@ -63,6 +63,37 @@
 // presses submit, the props will get based to cv component
 // and it will display that info the appropriate section, 
 
-// that will be the process for each component, 
+// that will be the process for each component,  
+
+
+// the next step is have user fill out personal details form 
+// then once submitted the info will be displayed 
+// in the cv-component header section, 
+// 
+
+// once submitted append to appropriate cv container, 
+// set the state of each value within that function, 
+
+// onSubmit btn is ran once submit btn is clicked, 
+// a function will be called which sets the value/state of all the values within the input field, 
+
+// each input field, will have an onChange, it will grab e.target.value 
+// the state will be set, 
+// then once the form is submitted, a function is called 
+// which passes the state values as props to a function which will display them in the CV component. 
+// 
+
+// capture each input value with onchange, 
+// 
+
+// I Have some experimenting to do, 
+// you cannot pass the props once the form is submitted, 
+
+// first call a function, to preventDefault, then maybe call the function is test file 
+
+
+
+// pass data to another component on form submit, the component will also render that data, 
+
 
 

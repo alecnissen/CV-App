@@ -19,7 +19,7 @@ export default function App() {
         <PersonalDetails></PersonalDetails>
         <Education></Education>
         <ProfessionalExperience></ProfessionalExperience>
-        <Test></Test>
+        {/* <Test></Test> */}
     </>
   );
 }
