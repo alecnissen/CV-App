@@ -142,3 +142,9 @@
 
 // KEYS FOR EACH PROP 
 // CHANGE THE NAME OF THE FORM WRAPPER AND EDUCATION CONTAINER TO SOMETHING BETTER 
+
+// now use the same process for email and phone number, 
+// allow submit btn functionality for each section, 
+
+// repeat the same process for education section, 
+// get all the content on the page after the submit btn is pressed, 

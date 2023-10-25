@@ -5,15 +5,13 @@ import Test from './Test';
 
 export default function PersonalDetails() {
     const [inputName, setInputName] = useState("");
-
     const [inputNameProps, setInputNameProps] = useState('');
-
     const [inputEmail, setInputEmail] = useState(""); 
-
     const [inputEmailProps, setInputEmailProps] = useState('');
-
     const [inputAddress, setInputAddress] = useState("");
+    const [inputAddressProps, setInputAddressProps] = useState("");
     const [inputPhone, setInputPhone] = useState("");
+    const [inputPhoneProps, setInputPhoneProps] = useState("");
 
     function handleSubmit(e) { 
       e.preventDefault();
@@ -21,6 +19,10 @@ export default function PersonalDetails() {
       setInputNameProps(inputName);
 
       setInputEmailProps(inputEmail);
+
+      setInputAddressProps(inputAddress);
+
+      setInputPhoneProps(inputPhone);
 
 
         // <HeaderCVComponent
@@ -68,8 +70,9 @@ export default function PersonalDetails() {
       </form>
     <HeaderCVComponent 
     inputName={inputNameProps}
-
     inputEmail={inputEmailProps}
+    inputAddress={inputAddressProps}
+    inputPhone={inputPhoneProps}
     ></HeaderCVComponent>
     </>
   );
