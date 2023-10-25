@@ -20,13 +20,17 @@
     font-size: 1rem;
 } 
 
-.education-form-container { 
+.education-input-container { 
     display: flex;
     flex-direction: column;
     grid-column-start: 1;
 } 
 
-.education-form-container input { 
+.form-container { 
+    grid-column-start: 1;
+}
+
+.education-input-container input { 
     width: min(15em);
     font-size: 1rem;
 } 
@@ -50,6 +54,14 @@
 .CV-component-container { 
     grid-column-start: 2;
     text-align: center;
+    /* grid-row-start: 1; */
+} 
+
+.education-cv-component-container { 
+    text-align: center;
 }
 
+.professional-experience-cv-component-container { 
+    text-align: center;
+}
 

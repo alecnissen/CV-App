@@ -5,7 +5,8 @@ import "./App.css";
 import Header from './Header';
 import Test from './Test';
 import ProfessionalExperience from './ProfessionalExperience';
-import CVComponent from './CVComponent';
+import HeaderCVComponent from './HeaderCVComponent';
+import EducationCVComponent from './EducationCVComponent';
 // import { useState } from 'react';
 
 
@@ -15,7 +16,7 @@ export default function App() {
   return (
     <>
         <Header></Header>
-        <CVComponent></CVComponent>
+        <HeaderCVComponent></HeaderCVComponent>
         <PersonalDetails></PersonalDetails>
         <Education></Education>
         <ProfessionalExperience></ProfessionalExperience>

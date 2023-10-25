@@ -95,5 +95,50 @@
 
 // pass data to another component on form submit, the component will also render that data, 
 
+// break each cv section into components as well, header, education, and experience, 
+// make sure its content starts at its specific rows, 
+// get all the content down, and apply basic styling to make sure content is going in the right place 
 
 
+
+// wrap items in form, button has onSubmit 
+// it will call a function which will display the data, 
+// try to make that work but also keep onChange so user can see live update
+// onSubmit within add btn, saves text to screen, clears inputs, 
+// allows user to add content each time add btn is pressed, 
+
+// today I will figure out, how to add the functionality for add btn within education and experience, 
+
+// 
+
+// when the add btn is pressed it will save the content to the correct location, and clear the data, 
+
+// you will have to wrap items in a form, 
+
+// ok one section at a time, 
+// start with header, once form is submitted pass the data to the CVHeaderComponent, 
+// dont forget to add a key to each prop
+// get the submit function working, once you understand how to do it, for one section
+// the same process for the rest of the sections, 
+
+// DO NOT FORGET TO ADD A KEY FOR EACH PROP, USE UUID RANDOM
+
+// what would happen when the form is submitted? 
+// a function is called which will pass the values to a function which will print the values 
+// 
+// look into the docs of passing data between components, 
+
+// that is what we are doing, form is sudmitted in one component, 
+// now that data will need to be displayed within another component, 
+// how can I properly pass that data to the component that renders? 
+
+
+// submit functionality now working, 
+// check the names of the containers in the personal details file 
+// edit the names to make it more understandable, 
+// save and commit, then finish the rest of the inputs and submit updates 
+// use the same logic for next 2 sections, 
+
+
+// KEYS FOR EACH PROP 
+// CHANGE THE NAME OF THE FORM WRAPPER AND EDUCATION CONTAINER TO SOMETHING BETTER 
