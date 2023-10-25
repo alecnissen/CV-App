@@ -5,17 +5,34 @@ import EducationCVComponent from './EducationCVComponent';
 export default function Education() {
 
 const [schoolNameInput, setSchoolNameInput] = useState("");
+const [schoolNameInputProps, setSchoolNameInputProps] = useState("");
 const [degreeInput, setDegreeInput] = useState("");
+const [degreeInputProps, setDegreeInputProps] = useState("");
 const [startDateInput, setStartDateInput] = useState("");
+const [startDateInputProps, setStartDateInputProps] = useState("");
 const [endDateInput, setEndDateInput] = useState("");
+const [endDateInputProps, setEndDateInputProps] = useState("");
 const [locationInput, setLocationInput] = useState("");
+const [locationInputProps, setLocationInputProps] = useState("");
 
 // call function here, on submit, it will pass the props to the educationCVComponent 
+
+function handleSubmit(e) { 
+  e.preventDefault();
+  setSchoolNameInputProps(schoolNameInput);
+  setDegreeInputProps(degreeInput);
+  setStartDateInputProps(startDateInput);
+  setEndDateInputProps(endDateInput);
+  setLocationInputProps(locationInput);
+
+
+
+} 
 
 
   return (
     <>
-      <form className='form-container'>
+      <form className="form-container">
         <div className="education-input-container">
           <h3>Education:</h3>
           <label>School Name:</label>
@@ -49,10 +66,19 @@ const [locationInput, setLocationInput] = useState("");
             onChange={e => setLocationInput(e.target.value)}
           ></input>
           <div className="education-btns-container">
-            <button type="submit">Submit</button>
+            <button onClick={handleSubmit} type="submit">
+              Submit
+            </button>
           </div>
         </div>
       </form>
+      <EducationCVComponent
+        schoolNameInput={schoolNameInputProps}
+        degreeInput={degreeInputProps}
+        startDateInput={startDateInputProps}
+        endDateInput={endDateInputProps}
+        locationInput={locationInputProps}
+      ></EducationCVComponent>
     </>
   );
 }

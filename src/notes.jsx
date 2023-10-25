@@ -148,3 +148,11 @@
 
 // repeat the same process for education section, 
 // get all the content on the page after the submit btn is pressed, 
+
+// figure out a way to add onto the education and experience sections, 
+
+// goal stands, I will figure out a way to add more content onto education and experience, 
+// am I dynamically rendering a component? 
+
+// finish the professional experience section, 
+// create the handle submit function then test again 
