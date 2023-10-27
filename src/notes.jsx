@@ -184,6 +184,69 @@
 // I would first like to figure out how to render the new data onto the component  
 
 
+
+
+// const App = () => {
+//   const [personalInfo, setPersonalInfo] = useState({
+//     fullName: '',
+//     birthday: '',
+//     email: '',
+//     address: '',
+//     phoneNumber: '',
+//   });
+//   const [fullName, setFullName] = useState('');
+//   const [birthday, setBirthday] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [address, setAddress] = useState('');
+//   const [phoneNumber, setPhoneNumber] = useState('');
+
+//   function handleSubmitPersonal(e) {
+//     e.preventDefault();
+//     const updatedInfo = {
+//       fullName: fullName,
+//       birthday: birthday,
+//       email: email,
+//       address: address,
+//       phoneNumber: phoneNumber,
+//     };
+//     setPersonalInfo(updatedInfo);
+//   }
+
+//   return (
+//     <>
+//       <form onSubmit={handleSubmitPersonal}>
+//         <input
+//           type="text"
+//           placeholder="Full name"
+//           onChange={e => setFullName(e.target.value)}
+//         />
+//         <input
+//           type="text"
+//           placeholder="D.O.B"
+//           onChange={e => setBirthday(e.target.value)}
+//         />
+//         <input
+//           type="text"
+//           placeholder="Email"
+//           onChange={e => setEmail(e.target.value)}
+//         />
+//         <input
+//           type="text"
+//           placeholder="Address"
+//           onChange={e => setAddress(e.target.value)}
+//         />
+//         <input
+//           type="text"
+//           placeholder="Phone Number"
+//           onChange={e => setPhoneNumber(e.target.value)}
+//         />
+//         <button type="submit">Submit</button>
+//       </form>
+//       <CVChildComponent personalInfo={personalInfo} />
+//     </>
+//   );
+// };
+
 // 10/27 plan 
 
 // implement the new code for personal details, look over the code again 
