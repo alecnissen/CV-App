@@ -142,6 +142,7 @@
 
 // KEYS FOR EACH PROP 
 // CHANGE THE NAME OF THE FORM WRAPPER AND EDUCATION CONTAINER TO SOMETHING BETTER 
+// HEADER DOES NOT NEED TO BE A COMPONENT, IT IS JUST AN H1
 
 // now use the same process for email and phone number, 
 // allow submit btn functionality for each section, 
@@ -156,3 +157,42 @@
 
 // finish the professional experience section, 
 // create the handle submit function then test again 
+
+// once form is submitted, the details will be displayed in the education or experience section, 
+// while also displaying on the cv 
+// user has the ability to click edit btn, to edit or delete item, 
+// once dropdown btn is pressed, the input form will popup allowing user to enter more info
+// 
+// allow the user to add more content for experience and education, like the example listed 
+// confused on where to start, 
+
+
+// lets first see if the content also renders below the section on btn click, 
+
+// if you get stuck just begin to style, 
+// its probably about time to begin adding some styles to see everthing come together, 
+
+// either start basic styling, 
+// figure out how to get content to go below section, after submit 
+
+// create another function which will render the data after submit, 
+
+// can I use the handle submit function to render the data below the form onSubmit? 
+
+// dropdown menu or the new content getting added to the cv or the dropmenu 
+// 
+// I would first like to figure out how to render the new data onto the component  
+
+
+// 10/27 plan 
+
+// implement the new code for personal details, look over the code again 
+// it looks like it will use one state object, 
+// instead of state for each input value, 
+// save and commit first, then implement, 
+// try the same process for education and experience, 
+// 
+
+// I notice that the description content for experience is not rendering, 
+// figure out why before commiting and moving on, 
+// lets check his messages also

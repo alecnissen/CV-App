@@ -22,8 +22,7 @@ export default function PersonalDetails() {
 
       setInputAddressProps(inputAddress);
 
-      setInputPhoneProps(inputPhone);
-
+      setInputPhoneProps(inputPhone); 
 
         // <HeaderCVComponent
         //   inputName={inputName}

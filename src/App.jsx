@@ -2,7 +2,7 @@
 import PersonalDetails from './PersonalDetails';
 import Education from './Education';
 import "./App.css";
-import Header from './Header';
+// import Header from './Header';
 import Test from './Test';
 import ProfessionalExperience from './ProfessionalExperience';
 import HeaderCVComponent from './HeaderCVComponent';
@@ -15,12 +15,15 @@ export default function App() {
 
   return (
     <>
-        <Header></Header>
-        <HeaderCVComponent></HeaderCVComponent>
-        <PersonalDetails></PersonalDetails>
-        <Education></Education>
-        <ProfessionalExperience></ProfessionalExperience>
-        {/* <Test></Test> */}
+      {/* <Header></Header> */}
+      <div className="main-header-container">
+        <h1 className="main-header">CV/Resume Generator</h1>
+      </div>
+      <HeaderCVComponent></HeaderCVComponent>
+      <PersonalDetails></PersonalDetails>
+      <Education></Education>
+      <ProfessionalExperience></ProfessionalExperience>
+      {/* <Test></Test> */}
     </>
   );
 }

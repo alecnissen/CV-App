@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 
 import EducationCVComponent from './EducationCVComponent';
 
-export default function Education() {
+export default function Education() { 
+
+const [educationFormInput, setEducationFormInput] = useState("");
 
 const [schoolNameInput, setSchoolNameInput] = useState("");
 const [schoolNameInputProps, setSchoolNameInputProps] = useState("");
@@ -24,8 +26,6 @@ function handleSubmit(e) {
   setStartDateInputProps(startDateInput);
   setEndDateInputProps(endDateInput);
   setLocationInputProps(locationInput);
-
-
 
 } 
 
@@ -70,6 +70,15 @@ function handleSubmit(e) {
               Submit
             </button>
           </div>
+          
+          {/* <div>
+            <h3>{schoolNameInput}</h3>
+            <h3>{degreeInput}</h3>
+            <h3>{startDateInput}</h3>
+            <h3>{endDateInput}</h3>
+            <h3>{locationInput}</h3>
+          </div> */}
+
         </div>
       </form>
       <EducationCVComponent
