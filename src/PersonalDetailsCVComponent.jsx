@@ -6,7 +6,6 @@ import PersonalDetails from './PersonalDetails';
 import App from './App';
 
 export default function PersonalDetailsCVComponent({ personalDetailsFormInput }) {
-  // const { inputName, inputEmail, inputAddress, inputPhone } = personalInfo;
   return (
     <>
       <div className="CV-component-container">

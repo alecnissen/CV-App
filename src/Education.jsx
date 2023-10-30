@@ -4,32 +4,16 @@ import EducationCVComponent from './EducationCVComponent';
 
 import App from './App';
 
-export default function Education() { 
+export default function Education({ handleSubmit }) {
 
-// const [educationFormInput, setEducationFormInput] = useState("");
-
-const [schoolNameInput, setSchoolNameInput] = useState("");
-const [degreeInput, setDegreeInput] = useState("");
-const [startDateInput, setStartDateInput] = useState("");
-const [endDateInput, setEndDateInput] = useState("");
-const [locationInput, setLocationInput] = useState("");
-
-// call function here, on submit, it will pass the props to the educationCVComponent 
-
-// function handleSubmit(e) { 
-//   e.preventDefault();
-//   setSchoolNameInputProps(schoolNameInput);
-//   setDegreeInputProps(degreeInput);
-//   setStartDateInputProps(startDateInput);
-//   setEndDateInputProps(endDateInput);
-//   setLocationInputProps(locationInput);
-
-// } 
-
+  const [schoolNameInput, setSchoolNameInput] = useState('');
+  const [degreeInput, setDegreeInput] = useState('');
+  const [startDateInput, setStartDateInput] = useState('');
+  const [endDateInput, setEndDateInput] = useState('');
+  const [locationInput, setLocationInput] = useState('');
 
   return (
     <>
-      <form className="form-container">
         <div className="education-input-container">
           <h3>Education:</h3>
           <label>School Name:</label>
@@ -65,7 +49,7 @@ const [locationInput, setLocationInput] = useState("");
           <div className="education-btns-container">
             <button
               onClick={() =>
-                handleSubmitEducation(
+                handleSubmit(
                   schoolNameInput,
                   degreeInput,
                   startDateInput,
@@ -78,23 +62,7 @@ const [locationInput, setLocationInput] = useState("");
               Submit
             </button>
           </div>
-
-          {/* <div>
-            <h3>{schoolNameInput}</h3>
-            <h3>{degreeInput}</h3>
-            <h3>{startDateInput}</h3>
-            <h3>{endDateInput}</h3>
-            <h3>{locationInput}</h3>
-          </div> */}
         </div>
-      </form>
-      {/* <EducationCVComponent
-        schoolNameInput={schoolNameInputProps}
-        degreeInput={degreeInputProps}
-        startDateInput={startDateInputProps}
-        endDateInput={endDateInputProps}
-        locationInput={locationInputProps}
-      ></EducationCVComponent> */}
     </>
   );
 }

@@ -2,7 +2,8 @@
   #root { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}  
+}   
+
 
 /* .main-header-container { 
     /* grid-column-start: 1; */

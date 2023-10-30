@@ -5,42 +5,14 @@ import App from './App';
 
 
 export default function PersonalDetails({handleSubmit}) {
-  // const [personalInfo, setPersonalInfo] = useState({
-  //   inputName: '',
-  //   inputEmail: '',
-  //   inputAddress: '',
-  //   inputPhone: '',
-  // });
-
-  // const [inputName, inputEmail, inputAddress, inputPhone] = props; 
-
-  // rendered content with this
-  // const {name, email, address, phone} = props;
-
-  // this rendered content
-  // const {handleSubmit} = props;
 
   const [inputName, setInputName] = useState('');
   const [inputEmail, setInputEmail] = useState('');
   const [inputAddress, setInputAddress] = useState('');
   const [inputPhone, setInputPhone] = useState('');
 
-  // function handleSubmitPersonal(e) {
-  //   e.preventDefault();
-
-  //   const updatedInfo = {
-  //     inputName: inputName,
-  //     inputEmail: inputEmail,
-  //     inputAddress: inputAddress,
-  //     inputPhone: inputPhone,
-  //   };
-
-  //   setPersonalInfo(updatedInfo);
-  // }
-
   return (
     <>
-      {/* <form className="personal-details-form"> */}
         <div className="personal-details-container">
           <h3>Personal Details:</h3>
           <label>Full Name: </label>
@@ -79,7 +51,6 @@ export default function PersonalDetails({handleSubmit}) {
             </button>
           </div>
         </div>
-      {/* </form> */}
     </>
   );
 }

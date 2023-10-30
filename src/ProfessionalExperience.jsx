@@ -1,26 +1,15 @@
 import React, { useState } from 'react'
 import ProfessionalExperienceCVComponent from './ProfessionalExperienceCVComponent';
 
-export default function ProfessionalExperience() { 
-
-  const [inputJobTitle, setInputJobTitle] = useState("");
-  const [inputCompany, setInputCompany] = useState("");
-  const [inputDescription, setInputDescription] = useState("");
-  const [inputStartDate, setInputStartDate] = useState("");
-  const [inputEndDate, setInputEndDate] = useState(""); 
-
-  // function handleSubmit(e) { 
-  //   e.preventDefault();
-  //   setInputJobTitleProps(inputJobTitle);
-  //   setInputCompanyProps(inputCompany);
-  //   setInputDescriptionProps;(inputDescription);
-  //   setInputStartDateProps(inputStartDate);
-  //   setInputEndDateProps(inputEndDate);
-  // }
+export default function ProfessionalExperience({ handleSubmit }) {
+  const [inputJobTitle, setInputJobTitle] = useState('');
+  const [inputCompany, setInputCompany] = useState('');
+  const [inputDescription, setInputDescription] = useState('');
+  const [inputStartDate, setInputStartDate] = useState('');
+  const [inputEndDate, setInputEndDate] = useState('');
 
   return (
     <>
-      <form>
         <div className="professional-experience-form-container">
           <h3>Professional Experience:</h3>
           <label>Job Title:</label>
@@ -56,7 +45,7 @@ export default function ProfessionalExperience() {
           <div className="professional-experience-btn-containers">
             <button
               onClick={() =>
-                handleSubmitExperience(
+                handleSubmit(
                   inputJobTitle,
                   inputCompany,
                   inputDescription,
@@ -68,17 +57,8 @@ export default function ProfessionalExperience() {
             >
               Submit
             </button>
-            {/* <button>Edit</button> */}
           </div>
         </div>
-      </form>
-      {/* <ProfessionalExperienceCVComponent
-        inputJobTitle={inputJobTitleProps}
-        inputCompany={inputCompanyProps}
-        inputDescription={inputDescriptionProps}
-        inputStartDate={inputStartDateProps}
-        inputEndDate={inputEndDateProps}
-      ></ProfessionalExperienceCVComponent> */}
     </>
   );
 }

@@ -317,4 +317,17 @@
 // and use that data within personal, education, and experience
 // is that hoisting state? 
 // review messages and see if you can get a clue, 
-// then ask 
+// then ask  
+
+
+
+// *** 10/30 plan 
+// will begin basic styling so the site comes together a little more, 
+// see also if you can put the rendered cv content below the respected section, 
+// render data within its own prop 
+
+// goal is basic styling, taking one section at a time, 
+// may want to clean up names, and variables, look over everything jsx, css,
+// make sure its more or less on the right path,
+// see if you can form data to render below its respected section, 
+// commit and save before you begin, check working tree, 
