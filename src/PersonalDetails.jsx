@@ -1,86 +1,85 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-import HeaderCVComponent from './HeaderCVComponent';
-import Test from './Test';
+import PersonalDetailsCVComponent from './PersonalDetailsCVComponent';
+import App from './App';
 
-export default function PersonalDetails() { 
 
-  const [personalInfo, setPersonalInfo] = useState({ 
-    inputName: "",
-    inputEmail: "",
-    inputAddress: "",
-    inputPhone: ""
-  });
+export default function PersonalDetails({handleSubmit}) {
+  // const [personalInfo, setPersonalInfo] = useState({
+  //   inputName: '',
+  //   inputEmail: '',
+  //   inputAddress: '',
+  //   inputPhone: '',
+  // });
 
-    const [inputName, setInputName] = useState("");
-    // const [inputNameProps, setInputNameProps] = useState('');
-    const [inputEmail, setInputEmail] = useState(""); 
-    // const [inputEmailProps, setInputEmailProps] = useState('');
-    const [inputAddress, setInputAddress] = useState("");
-    // const [inputAddressProps, setInputAddressProps] = useState("");
-    const [inputPhone, setInputPhone] = useState("");
-    // const [inputPhoneProps, setInputPhoneProps] = useState("");
+  // const [inputName, inputEmail, inputAddress, inputPhone] = props; 
 
-    function handleSubmitPersonal(e) { 
-      e.preventDefault(); 
+  // rendered content with this
+  // const {name, email, address, phone} = props;
 
-      const updatedInfo = { 
-        inputName: inputName,
-        inputEmail: inputEmail,
-        inputAddress: inputAddress,
-        inputPhone: inputPhone,
-      }
+  // this rendered content
+  // const {handleSubmit} = props;
 
-      // setInputNameProps(inputName);
+  const [inputName, setInputName] = useState('');
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputAddress, setInputAddress] = useState('');
+  const [inputPhone, setInputPhone] = useState('');
 
-      // setInputEmailProps(inputEmail);
+  // function handleSubmitPersonal(e) {
+  //   e.preventDefault();
 
-      // setInputAddressProps(inputAddress);
+  //   const updatedInfo = {
+  //     inputName: inputName,
+  //     inputEmail: inputEmail,
+  //     inputAddress: inputAddress,
+  //     inputPhone: inputPhone,
+  //   };
 
-      // setInputPhoneProps(inputPhone); 
-      
-      setPersonalInfo(updatedInfo);
-  
-    }
+  //   setPersonalInfo(updatedInfo);
+  // }
 
   return (
     <>
-      <form className="personal-details-form">
+      {/* <form className="personal-details-form"> */}
         <div className="personal-details-container">
           <h3>Personal Details:</h3>
           <label>Full Name: </label>
           <input
             type="text"
-            // value={inputName}
             onChange={e => setInputName(e.target.value)}
           ></input>
           <label>E-Mail:</label>
           <input
             type="text"
-            // value={inputEmail}
             onChange={e => setInputEmail(e.target.value)}
           ></input>
           <label>Address: </label>
           <input
             type="text"
-            // value={inputAddress}
             onChange={e => setInputAddress(e.target.value)}
           ></input>
           <label>Phone Number:</label>
           <input
             type="text"
-            // value={inputPhone}
             onChange={e => setInputPhone(e.target.value)}
           ></input>
           <div className="personal-details-btn-container">
-            <button onClick={handleSubmitPersonal} type="submit">Submit</button>
-            {/* <button>Edit</button> */}
+            <button
+              onClick={() =>
+                handleSubmit(
+                  inputName,
+                  inputEmail,
+                  inputAddress,
+                  inputPhone,
+                )
+              }
+              type="submit"
+            >
+              Submit
+            </button>
           </div>
         </div>
-      </form>
-    <HeaderCVComponent 
-   personalInfo={personalInfo} 
-    ></HeaderCVComponent>
+      {/* </form> */}
     </>
   );
 }

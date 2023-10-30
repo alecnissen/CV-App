@@ -259,3 +259,62 @@
 // I notice that the description content for experience is not rendering, 
 // figure out why before commiting and moving on, 
 // lets check his messages also
+
+// review the messages, understand the problems and go over his suggestions 
+// whiteboard out plan, 
+// begin tackling one section at a time, 
+
+// The problem is how my components are being used, 
+// I was using components twice, 
+
+// NEW PLAN ***************** 
+
+
+// the structure of my site will need to change 
+
+// STATE CHANGES *** 
+// within app state variables for each, personal, edu, experience
+// example const [personalDetails, setPersonalDetails] = useState();
+// So within app, all the form state will be set within there, 
+
+// each form will have its own state updater function 
+// handleSubmitPersonal 
+// handleSubmitEducation 
+// handleSubmitExperience 
+
+// updates the object 
+
+// then in the return statement, 
+// we will pass the updated state data to the respected components, 
+
+
+// COMPONENTS ***
+
+
+// *** 
+// fixed the app component so that it has all the handleSubmit functions inside 
+// but now what will go inside the personal, education and experience? 
+// I will need to review the messages again 
+
+// am I going to need to use an onChange event, or just a submit btn within each section, 
+// then pass all the values to the appropriate handle submit functions 
+
+// getting the state within app.jsx but what will I do inside the individual components? Personal, education? 
+
+// what am I using those components for, when it seems like Im grabbing the state in app.jsx? 
+
+// am I passing anything to them. 
+
+// ***
+// errors are gone, now try to print the data that was passed into the cv components
+// goal is to try to print the form data to the cv portion, 
+// however why are my handleSubmit functions returning undefined? 
+// that seems to be the lone error not causing the content to render 
+// try to figure out why the handleSubmit functions are returning the error 
+// 
+
+// you have to find a way to access the handleSubmit functions within app.jsx, 
+// and use that data within personal, education, and experience
+// is that hoisting state? 
+// review messages and see if you can get a clue, 
+// then ask 

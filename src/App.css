@@ -23,6 +23,10 @@
     font-size: 1.5rem; */
 /* }  */
 
+#form { 
+    grid-column-start: 1;
+}
+
 .personal-details-container { 
     display: flex;
     flex-direction: column;

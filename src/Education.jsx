@@ -2,32 +2,29 @@ import React, { useState } from 'react'
 
 import EducationCVComponent from './EducationCVComponent';
 
+import App from './App';
+
 export default function Education() { 
 
-const [educationFormInput, setEducationFormInput] = useState("");
+// const [educationFormInput, setEducationFormInput] = useState("");
 
 const [schoolNameInput, setSchoolNameInput] = useState("");
-const [schoolNameInputProps, setSchoolNameInputProps] = useState("");
 const [degreeInput, setDegreeInput] = useState("");
-const [degreeInputProps, setDegreeInputProps] = useState("");
 const [startDateInput, setStartDateInput] = useState("");
-const [startDateInputProps, setStartDateInputProps] = useState("");
 const [endDateInput, setEndDateInput] = useState("");
-const [endDateInputProps, setEndDateInputProps] = useState("");
 const [locationInput, setLocationInput] = useState("");
-const [locationInputProps, setLocationInputProps] = useState("");
 
 // call function here, on submit, it will pass the props to the educationCVComponent 
 
-function handleSubmit(e) { 
-  e.preventDefault();
-  setSchoolNameInputProps(schoolNameInput);
-  setDegreeInputProps(degreeInput);
-  setStartDateInputProps(startDateInput);
-  setEndDateInputProps(endDateInput);
-  setLocationInputProps(locationInput);
+// function handleSubmit(e) { 
+//   e.preventDefault();
+//   setSchoolNameInputProps(schoolNameInput);
+//   setDegreeInputProps(degreeInput);
+//   setStartDateInputProps(startDateInput);
+//   setEndDateInputProps(endDateInput);
+//   setLocationInputProps(locationInput);
 
-} 
+// } 
 
 
   return (
@@ -66,11 +63,22 @@ function handleSubmit(e) {
             onChange={e => setLocationInput(e.target.value)}
           ></input>
           <div className="education-btns-container">
-            <button onClick={handleSubmit} type="submit">
+            <button
+              onClick={() =>
+                handleSubmitEducation(
+                  schoolNameInput,
+                  degreeInput,
+                  startDateInput,
+                  endDateInput,
+                  locationInput,
+                )
+              }
+              type="submit"
+            >
               Submit
             </button>
           </div>
-          
+
           {/* <div>
             <h3>{schoolNameInput}</h3>
             <h3>{degreeInput}</h3>
@@ -78,16 +86,15 @@ function handleSubmit(e) {
             <h3>{endDateInput}</h3>
             <h3>{locationInput}</h3>
           </div> */}
-
         </div>
       </form>
-      <EducationCVComponent
+      {/* <EducationCVComponent
         schoolNameInput={schoolNameInputProps}
         degreeInput={degreeInputProps}
         startDateInput={startDateInputProps}
         endDateInput={endDateInputProps}
         locationInput={locationInputProps}
-      ></EducationCVComponent>
+      ></EducationCVComponent> */}
     </>
   );
 }
