@@ -334,4 +334,8 @@
 // 
 
 // *** saved, first see if you can render the submited content
-// below the form sections, 
+// below the form sections,  
+
+// *** dropdown and basic styling for personal details rough draft complete 
+// next do the same thing for education and experience, 
+// then we can start to implement the add on features, edit and delete option. 
