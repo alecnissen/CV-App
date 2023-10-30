@@ -331,3 +331,7 @@
 // make sure its more or less on the right path,
 // see if you can form data to render below its respected section, 
 // commit and save before you begin, check working tree, 
+// 
+
+// *** saved, first see if you can render the submited content
+// below the form sections, 

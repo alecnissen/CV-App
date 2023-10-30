@@ -5,25 +5,6 @@
 }   
 
 
-/* .main-header-container { 
-    /* grid-column-start: 1; */
-    /* text-align: center; */
-/* } */ 
-
-/* .main-header { 
-    text-align: right;
-    font-size: 3rem;
-} */ 
-
-/* .main-header-container { 
-    /* display: flex;
-    justify-content: center;
-    width: auto; */
-    /* text-align: left;
-    grid-column-start: 2;
-    font-size: 1.5rem; */
-/* }  */
-
 #form { 
     grid-column-start: 1;
 }
@@ -44,10 +25,6 @@
     flex-direction: column;
     grid-column-start: 1;
 } 
-
-.form-container { 
-    grid-column-start: 1;
-}
 
 .education-input-container input { 
     width: min(15em);
@@ -70,10 +47,9 @@
     font-size: 1rem;
 } 
 
-.CV-component-container { 
+.personal-details-CV-component-container { 
     grid-column-start: 2;
     text-align: center;
-    /* grid-row-start: 1; */
 } 
 
 .education-cv-component-container { 

@@ -52,15 +52,30 @@ export default function App() {
         <h1 className="main-header">CV/Resume Generator</h1>
       </div>
       <div id="form">
-        <PersonalDetails handleSubmit={handleSubmitPersonal}></PersonalDetails>
-        <Education handleSubmit={handleSubmitEducation}></Education>
-        <ProfessionalExperience handleSubmit={handleSubmitExperience}></ProfessionalExperience>
+        <PersonalDetails
+          handleSubmit={handleSubmitPersonal}
+          personalDetailsFormInput={personalDetailsFormInput}
+        ></PersonalDetails>
+        <Education
+          handleSubmit={handleSubmitEducation}
+          educationFormInput={educationFormInput}
+        ></Education>
+        <ProfessionalExperience
+          handleSubmit={handleSubmitExperience}
+          experienceFormInput={experienceFormInput}
+        ></ProfessionalExperience>
       </div>
 
       <div id="cv-page">
-        <PersonalDetailsCVComponent personalDetailsFormInput={personalDetailsFormInput}></PersonalDetailsCVComponent>
-        <EducationCVComponent educationFormInput={educationFormInput}></EducationCVComponent>
-        <ProfessionalExperienceCVComponent experienceFormInput={experienceFormInput}></ProfessionalExperienceCVComponent>
+        <PersonalDetailsCVComponent
+          personalDetailsFormInput={personalDetailsFormInput}
+        ></PersonalDetailsCVComponent>
+        <EducationCVComponent
+          educationFormInput={educationFormInput}
+        ></EducationCVComponent>
+        <ProfessionalExperienceCVComponent
+          experienceFormInput={experienceFormInput}
+        ></ProfessionalExperienceCVComponent>
       </div>
     </>
   );

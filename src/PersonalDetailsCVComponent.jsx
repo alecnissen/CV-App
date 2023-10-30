@@ -8,7 +8,7 @@ import App from './App';
 export default function PersonalDetailsCVComponent({ personalDetailsFormInput }) {
   return (
     <>
-      <div className="CV-component-container">
+      <div className="personal-details-CV-component-container">
         <h3>{personalDetailsFormInput.inputName}</h3>
         <h3>{personalDetailsFormInput.inputEmail}</h3>
         <h3>{personalDetailsFormInput.inputAddress}</h3>
