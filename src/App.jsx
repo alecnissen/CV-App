@@ -13,9 +13,6 @@ export default function App() {
   // init state object that will hold all the personalDetails form entries 
   // 
 
-  const [personalDetailsFormArray, setPersonalDetailsFormArray] = useState([]);
-
-  console.log(personalDetailsFormArray);
   const [personalDetailsFormInput, setPersonalDetailsFormInput] = useState('');
   const [educationFormInput, setEducationFormInput] = useState('');
   const [experienceFormInput, setExperienceFormInput] = useState('');
@@ -43,7 +40,12 @@ export default function App() {
       locationInput: locationInput,
     };
     setEducationFormInput(updatedInfo);
+
   } 
+
+  // function clearEducationForm(e) { 
+  //   e.reset();
+  // }
 
   function handleSubmitExperience(
     e, 
@@ -78,6 +80,7 @@ export default function App() {
         <Education
           handleSubmit={handleSubmitEducation}
           educationFormInput={educationFormInput}
+          // clearEducationForm={clearEducationForm}
         ></Education>
         <ProfessionalExperience
           handleSubmit={handleSubmitExperience}

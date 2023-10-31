@@ -27,6 +27,7 @@ export default function Education({ handleSubmit, educationFormInput }) {
         <form
           className="hide-show-content-education-details"
           style={showedEducation ? { display: 'none' } : { display: 'flex' }}
+          // onSubmit={e => clearEducationForm(e)}
         >
           <label>School Name:</label>
           <input
@@ -60,7 +61,7 @@ export default function Education({ handleSubmit, educationFormInput }) {
           ></input>
           <div className="education-btns-container">
             <button
-              onClick={(e) =>
+              onClick={e =>
                 handleSubmit(
                   e,
                   schoolNameInput,
@@ -77,16 +78,14 @@ export default function Education({ handleSubmit, educationFormInput }) {
           </div>
         </form>
 
-      <div className="education-form-content">
-        <h3>{educationFormInput.schoolNameInput}</h3>
-        <h3>{educationFormInput.degreeInput}</h3>
-        <h3>{educationFormInput.startDateInput}</h3>
-        <h3>{educationFormInput.endDateInput}</h3>
-        <h3>{educationFormInput.locationInput}</h3>
+        <div className="education-form-content">
+          <h3>{educationFormInput.schoolNameInput}</h3>
+          <h3>{educationFormInput.degreeInput}</h3>
+          <h3>{educationFormInput.startDateInput}</h3>
+          <h3>{educationFormInput.endDateInput}</h3>
+          <h3>{educationFormInput.locationInput}</h3>
+        </div>
       </div>
-
-      </div>
-
     </>
   );
 }
