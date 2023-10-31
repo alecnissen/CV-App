@@ -10,11 +10,18 @@ import { useState } from 'react';
 
 export default function App() { 
 
+  // init state object that will hold all the personalDetails form entries 
+  // 
+
+  const [personalDetailsFormArray, setPersonalDetailsFormArray] = useState([]);
+
+  console.log(personalDetailsFormArray);
   const [personalDetailsFormInput, setPersonalDetailsFormInput] = useState('');
   const [educationFormInput, setEducationFormInput] = useState('');
   const [experienceFormInput, setExperienceFormInput] = useState('');
 
-  function handleSubmitPersonal(inputName, inputEmail, inputAddress, inputPhone) {
+  function handleSubmitPersonal(e, inputName, inputEmail, inputAddress, inputPhone) {
+    e.preventDefault();
     const updatedInfo = {
       inputName: inputName,
       inputEmail: inputEmail,
@@ -22,9 +29,12 @@ export default function App() {
       inputPhone: inputPhone,
     };
     setPersonalDetailsFormInput(updatedInfo);
+
+    // setPersonalDetailsFormArray(updatedInfo);
   } 
 
-  function handleSubmitEducation(schoolNameInput, degreeInput, startDateInput, endDateInput, locationInput) { 
+  function handleSubmitEducation(e, schoolNameInput, degreeInput, startDateInput, endDateInput, locationInput) { 
+     e.preventDefault();
     const updatedInfo = {
       schoolNameInput: schoolNameInput,
       degreeInput: degreeInput,
@@ -35,7 +45,15 @@ export default function App() {
     setEducationFormInput(updatedInfo);
   } 
 
-  function handleSubmitExperience(inputJobTitle, inputCompany, inputDescription, inputStartDate, inputEndDate) { 
+  function handleSubmitExperience(
+    e, 
+    inputJobTitle,
+    inputCompany,
+    inputDescription,
+    inputStartDate,
+    inputEndDate,
+  ) {
+    e.preventDefault();
     const updatedInfo = {
       inputJobTitle: inputJobTitle,
       inputCompany: inputCompany,
@@ -55,6 +73,7 @@ export default function App() {
         <PersonalDetails
           handleSubmit={handleSubmitPersonal}
           personalDetailsFormInput={personalDetailsFormInput}
+          // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetails>
         <Education
           handleSubmit={handleSubmitEducation}
@@ -69,6 +88,7 @@ export default function App() {
       <div id="cv-page">
         <PersonalDetailsCVComponent
           personalDetailsFormInput={personalDetailsFormInput}
+          // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetailsCVComponent>
         <EducationCVComponent
           educationFormInput={educationFormInput}

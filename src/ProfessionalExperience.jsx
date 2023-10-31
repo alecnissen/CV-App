@@ -7,11 +7,23 @@ export default function ProfessionalExperience({ handleSubmit, experienceFormInp
   const [inputDescription, setInputDescription] = useState('');
   const [inputStartDate, setInputStartDate] = useState('');
   const [inputEndDate, setInputEndDate] = useState('');
+  const [showedExperience, setShowedExperience] = useState(false);
 
   return (
     <>
       <div className="professional-experience-form-container">
         <h3>Professional Experience:</h3>
+        <div className="dropdown-icon-experience-details">
+          <img
+            src="Icons/down-arrow.png"
+            onClick={() => setShowedExperience(!showedExperience)}
+          ></img>
+        </div>
+
+        <form 
+        className="hide-show-content-experience"
+        style={showedExperience ? { display: 'none' } : { display: 'flex' }}
+        > 
         <label>Job Title:</label>
         <input
           type="text"
@@ -44,8 +56,9 @@ export default function ProfessionalExperience({ handleSubmit, experienceFormInp
         ></input>
         <div className="professional-experience-btn-containers">
           <button
-            onClick={() =>
+            onClick={e =>
               handleSubmit(
+                e,
                 inputJobTitle,
                 inputCompany,
                 inputDescription,
@@ -58,7 +71,7 @@ export default function ProfessionalExperience({ handleSubmit, experienceFormInp
             Submit
           </button>
         </div>
-      </div>
+        </form>
 
       <div className="experience-form-content">
         <h3>{experienceFormInput.inputJobTitle}</h3>
@@ -67,6 +80,9 @@ export default function ProfessionalExperience({ handleSubmit, experienceFormInp
         <h3>{experienceFormInput.inputStartDate}</h3>
         <h3>{experienceFormInput.inputEndDate}</h3>
       </div>
+
+      </div>
+
     </>
   );
 }

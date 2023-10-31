@@ -339,3 +339,12 @@
 // *** dropdown and basic styling for personal details rough draft complete 
 // next do the same thing for education and experience, 
 // then we can start to implement the add on features, edit and delete option. 
+
+// could also start implementing the save option, which would clear the form/input fields, and allow the user to add more content, 
+// pressing save would clear the inputs, 
+// should I wrap the inputs and container in a form, can it be done without a form? 
+
+// once save btn is pressed, clear the form input fields, 
+// save the object that was entered into the array 
+
+// get dropdown for each section, make sure to prevent default on each form as well 
