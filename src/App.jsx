@@ -6,6 +6,7 @@ import ProfessionalExperience from './ProfessionalExperience';
 import EducationCVComponent from './EducationCVComponent';
 import PersonalDetailsCVComponent from './PersonalDetailsCVComponent.jsx';
 import ProfessionalExperienceCVComponent from './ProfessionalExperienceCVComponent';
+import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
 
 export default function App() { 
@@ -39,7 +40,7 @@ export default function App() {
       endDateInput: endDateInput,
       locationInput: locationInput,
     };
-    setEducationForm(updatedInfo);
+    setEducationForm({...updatedInfo, updatedInfo});
   } 
 
   // function clearEducationForm(e) { 

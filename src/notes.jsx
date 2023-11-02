@@ -372,3 +372,6 @@
 // then pass the variable to the cv componenet, map through the properties and render them, 
 // commit and save work before implementing new feature, 
 // basically just implemented the clear function, 
+
+// begin to implement map method within the cv component, 
+// iterate over all the properties, and render them use the list items example, 
