@@ -13,9 +13,9 @@ export default function App() {
   // init state object that will hold all the personalDetails form entries 
   // 
 
-  const [personalDetailsFormInput, setPersonalDetailsFormInput] = useState('');
-  const [educationFormInput, setEducationFormInput] = useState('');
-  const [experienceFormInput, setExperienceFormInput] = useState('');
+  const [personalDetailsForm, setPersonalDetailsForm] = useState('');
+  const [educationForm, setEducationForm] = useState([]);
+  const [experienceForm, setExperienceForm] = useState([]);
 
   function handleSubmitPersonal(e, inputName, inputEmail, inputAddress, inputPhone) {
     e.preventDefault();
@@ -25,7 +25,7 @@ export default function App() {
       inputAddress: inputAddress,
       inputPhone: inputPhone,
     };
-    setPersonalDetailsFormInput(updatedInfo);
+    setPersonalDetailsForm(updatedInfo);
 
     // setPersonalDetailsFormArray(updatedInfo);
   } 
@@ -39,8 +39,7 @@ export default function App() {
       endDateInput: endDateInput,
       locationInput: locationInput,
     };
-    setEducationFormInput(updatedInfo);
-
+    setEducationForm(updatedInfo);
   } 
 
   // function clearEducationForm(e) { 
@@ -63,7 +62,7 @@ export default function App() {
       inputStartDate: inputStartDate,
       inputEndDate: inputEndDate,
     };
-    setExperienceFormInput(updatedInfo);
+    setExperienceForm(updatedInfo);
   }
 
   return (
@@ -74,30 +73,30 @@ export default function App() {
       <div id="form">
         <PersonalDetails
           handleSubmit={handleSubmitPersonal}
-          personalDetailsFormInput={personalDetailsFormInput}
+          personalDetailsForm={personalDetailsForm}
           // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetails>
         <Education
           handleSubmit={handleSubmitEducation}
-          educationFormInput={educationFormInput}
+          educationForm={educationForm}
           // clearEducationForm={clearEducationForm}
         ></Education>
         <ProfessionalExperience
           handleSubmit={handleSubmitExperience}
-          experienceFormInput={experienceFormInput}
+          experienceForm={experienceForm}
         ></ProfessionalExperience>
       </div>
 
       <div id="cv-page">
         <PersonalDetailsCVComponent
-          personalDetailsFormInput={personalDetailsFormInput}
+          personalDetailsForm={personalDetailsForm}
           // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetailsCVComponent>
         <EducationCVComponent
-          educationFormInput={educationFormInput}
+          educationForm={educationForm}
         ></EducationCVComponent>
         <ProfessionalExperienceCVComponent
-          experienceFormInput={experienceFormInput}
+          experienceForm={experienceForm}
         ></ProfessionalExperienceCVComponent>
       </div>
     </>

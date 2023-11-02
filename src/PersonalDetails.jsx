@@ -4,11 +4,11 @@ import PersonalDetailsCVComponent from './PersonalDetailsCVComponent';
 import App from './App';
 
 
-export default function PersonalDetails({ handleSubmit, personalDetailsFormInput }) {
+export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
   const [inputName, setInputName] = useState('');
   const [inputEmail, setInputEmail] = useState('');
   const [inputAddress, setInputAddress] = useState('');
-  const [inputPhone, setInputPhone] = useState(''); 
+  const [inputPhone, setInputPhone] = useState('');
   const [showed, setShowed] = useState(false);
 
   return (
@@ -27,45 +27,45 @@ export default function PersonalDetails({ handleSubmit, personalDetailsFormInput
           style={showed ? { display: 'none' } : { display: 'flex' }}
         >
           {/* <form> */}
-            <label>Full Name: </label>
-            <input
-              type="text"
-              onChange={e => setInputName(e.target.value)}
-            ></input>
-            <label>E-Mail:</label>
-            <input
-              type="text"
-              onChange={e => setInputEmail(e.target.value)}
-            ></input>
-            <label>Address: </label>
-            <input
-              type="text"
-              onChange={e => setInputAddress(e.target.value)}
-            ></input>
-            <label>Phone Number:</label>
-            <input
-              type="text"
-              onChange={e => setInputPhone(e.target.value)}
-            ></input>
-            <div className="personal-details-btn-container">
-              <button
-                onClick={(e) =>
-                  handleSubmit(e, inputName, inputEmail, inputAddress, inputPhone)
-                }
-                type="submit"
-              >
-                Submit
-              </button>
-              <button>Save</button>
-            </div>
+          <label>Full Name: </label>
+          <input
+            type="text"
+            onChange={e => setInputName(e.target.value)}
+          ></input>
+          <label>E-Mail:</label>
+          <input
+            type="text"
+            onChange={e => setInputEmail(e.target.value)}
+          ></input>
+          <label>Address: </label>
+          <input
+            type="text"
+            onChange={e => setInputAddress(e.target.value)}
+          ></input>
+          <label>Phone Number:</label>
+          <input
+            type="text"
+            onChange={e => setInputPhone(e.target.value)}
+          ></input>
+          <div className="personal-details-btn-container">
+            <button
+              onClick={e =>
+                handleSubmit(e, inputName, inputEmail, inputAddress, inputPhone)
+              }
+              type="submit"
+            >
+              Submit
+            </button>
+            <button>Save</button>
+          </div>
           {/* </form> */}
         </form>
 
         <div className="personal-details-form-content">
-          <h3>{personalDetailsFormInput.inputName}</h3>
-          <h3>{personalDetailsFormInput.inputEmail}</h3>
-          <h3>{personalDetailsFormInput.inputAddress}</h3>
-          <h3>{personalDetailsFormInput.inputPhone}</h3>
+          <h3>{personalDetailsForm.inputName}</h3>
+          <h3>{personalDetailsForm.inputEmail}</h3>
+          <h3>{personalDetailsForm.inputAddress}</h3>
+          <h3>{personalDetailsForm.inputPhone}</h3>
         </div>
       </div>
     </>

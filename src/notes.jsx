@@ -348,3 +348,27 @@
 // save the object that was entered into the array 
 
 // get dropdown for each section, make sure to prevent default on each form as well 
+
+
+// feeling pretty lost on how to implement this add on feature, 
+// yes it will clear inputs but its just replacing the old with the new, 
+// how can I get it so it still shows all the entries that the user typed in. 
+// will that use conditional rendering? If so won't I need to init an array? 
+// It feels like I need to do something with my components, 
+
+
+// I need to update the state of the education array, 
+// then once the state is updated within the component I will need to map over the all the items in the array, 
+// and then render them, 
+
+// how will I update the state or add new items to the array? 
+// where would I set the new state, where would I update the state? 
+// 
+
+
+// the add on feature for education and experience, 
+// try to use the syntax that were using, 
+// use the spread operator, make a copy of the new array then add the new item, 
+// then pass the variable to the cv componenet, map through the properties and render them, 
+// commit and save work before implementing new feature, 
+// basically just implemented the clear function, 

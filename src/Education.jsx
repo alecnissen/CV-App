@@ -4,13 +4,24 @@ import EducationCVComponent from './EducationCVComponent';
 
 import App from './App';
 
-export default function Education({ handleSubmit, educationFormInput }) {
+
+
+export default function Education({ handleSubmit, educationForm }) {
   const [schoolNameInput, setSchoolNameInput] = useState('');
   const [degreeInput, setDegreeInput] = useState('');
   const [startDateInput, setStartDateInput] = useState('');
   const [endDateInput, setEndDateInput] = useState('');
   const [locationInput, setLocationInput] = useState('');
-  const [showedEducation, setShowedEducation] = useState(false);
+  const [showedEducation, setShowedEducation] = useState(false); 
+
+   function clearEducationInputs( ) {
+    setSchoolNameInput(''); 
+    setDegreeInput('');
+    setStartDateInput(''); 
+    setEndDateInput('');
+    setLocationInput('');
+    setShowedEducation('');
+  } 
 
   return (
     <>
@@ -61,15 +72,17 @@ export default function Education({ handleSubmit, educationFormInput }) {
           ></input>
           <div className="education-btns-container">
             <button
-              onClick={e =>
-                handleSubmit(
-                  e,
-                  schoolNameInput,
-                  degreeInput,
-                  startDateInput,
-                  endDateInput,
-                  locationInput,
-                )
+              onClick={e => { 
+                  handleSubmit(
+                    e,
+                    schoolNameInput,
+                    degreeInput,
+                    startDateInput,
+                    endDateInput,
+                    locationInput,
+                  );
+                  clearEducationInputs();
+                } 
               }
               type="submit"
             >
@@ -79,11 +92,11 @@ export default function Education({ handleSubmit, educationFormInput }) {
         </form>
 
         <div className="education-form-content">
-          <h3>{educationFormInput.schoolNameInput}</h3>
-          <h3>{educationFormInput.degreeInput}</h3>
-          <h3>{educationFormInput.startDateInput}</h3>
-          <h3>{educationFormInput.endDateInput}</h3>
-          <h3>{educationFormInput.locationInput}</h3>
+          <h3>{educationForm.schoolNameInput}</h3>
+          <h3>{educationForm.degreeInput}</h3>
+          <h3>{educationForm.startDateInput}</h3>
+          <h3>{educationForm.endDateInput}</h3>
+          <h3>{educationForm.locationInput}</h3>
         </div>
       </div>
     </>

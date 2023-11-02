@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function EducationCVComponent({ educationFormInput }) {
+export default function EducationCVComponent({ educationForm }) {
   return (
     <div className="education-cv-component-container">
-      <h3>{educationFormInput.schoolNameInput}</h3>
-      <h3>{educationFormInput.degreeInput}</h3>
-      <h3>{educationFormInput.startDateInput}</h3>
-      <h3>{educationFormInput.endDateInput}</h3>
-      <h3>{educationFormInput.locationInput}</h3>
+      <h3>{educationForm.schoolNameInput}</h3>
+      <h3>{educationForm.degreeInput}</h3>
+      <h3>{educationForm.startDateInput}</h3>
+      <h3>{educationForm.endDateInput}</h3>
+      <h3>{educationForm.locationInput}</h3>
     </div>
   );
 } 
