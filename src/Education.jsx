@@ -72,18 +72,17 @@ export default function Education({ handleSubmit, educationForm }) {
           ></input>
           <div className="education-btns-container">
             <button
-              onClick={e => { 
-                  handleSubmit(
-                    e,
-                    schoolNameInput,
-                    degreeInput,
-                    startDateInput,
-                    endDateInput,
-                    locationInput,
-                  );
-                  clearEducationInputs();
-                } 
-              }
+              onClick={e => {
+                handleSubmit(
+                  e,
+                  schoolNameInput,
+                  degreeInput,
+                  startDateInput,
+                  endDateInput,
+                  locationInput,
+                );
+                clearEducationInputs();
+              }}
               type="submit"
             >
               Submit

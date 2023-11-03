@@ -40,7 +40,7 @@ export default function App() {
       endDateInput: endDateInput,
       locationInput: locationInput,
     };
-    setEducationForm({...updatedInfo, updatedInfo});
+    setEducationForm([...updatedInfo, updatedInfo])
   } 
 
   // function clearEducationForm(e) { 
