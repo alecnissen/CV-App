@@ -375,3 +375,14 @@
 
 // begin to implement map method within the cv component, 
 // iterate over all the properties, and render them use the list items example, 
+
+
+
+// ADD ON FEATURE WORKING 
+// DON'T FORGET THE FORM CLEARING FEATURE IN ALL THE SECTIONS, 
+// IMPLEMENT FOR PERSONAL AND EXPERIENCE, 
+
+// clear feature implemented, 
+// now begin more styling on the cv component side to make sure things to start to line up, 
+// start with the personal details section, then move onto the next section, 
+// basic styling, making sure things are more or less in the right place 

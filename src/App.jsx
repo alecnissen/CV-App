@@ -64,7 +64,7 @@ export default function App() {
       inputStartDate: inputStartDate,
       inputEndDate: inputEndDate,
     };
-    setExperienceForm(updatedInfo);
+    setExperienceForm([...experienceForm, updatedInfo]);
   }
 
   return (

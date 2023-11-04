@@ -7,7 +7,15 @@ export default function ProfessionalExperience({ handleSubmit, experienceForm })
   const [inputDescription, setInputDescription] = useState('');
   const [inputStartDate, setInputStartDate] = useState('');
   const [inputEndDate, setInputEndDate] = useState('');
-  const [showedExperience, setShowedExperience] = useState(false);
+  const [showedExperience, setShowedExperience] = useState(false); 
+
+  function clearExperienceInputs() { 
+    setInputJobTitle('');
+    setInputCompany('');
+    setInputDescription('');
+    setInputStartDate('');
+    setInputEndDate('');
+  }
 
   return (
     <>
@@ -56,7 +64,7 @@ export default function ProfessionalExperience({ handleSubmit, experienceForm })
           ></input>
           <div className="professional-experience-btn-containers">
             <button
-              onClick={e =>
+              onClick={e => {
                 handleSubmit(
                   e,
                   inputJobTitle,
@@ -64,8 +72,9 @@ export default function ProfessionalExperience({ handleSubmit, experienceForm })
                   inputDescription,
                   inputStartDate,
                   inputEndDate,
-                )
-              }
+                );
+                clearExperienceInputs();
+              }}
               type="submit"
             >
               Submit
@@ -74,11 +83,17 @@ export default function ProfessionalExperience({ handleSubmit, experienceForm })
         </form>
 
         <div className="experience-form-content">
-          <h3>{experienceForm.inputJobTitle}</h3>
-          <h3>{experienceForm.inputCompany}</h3>
-          <h3>{experienceForm.inputDescription}</h3>
-          <h3>{experienceForm.inputStartDate}</h3>
-          <h3>{experienceForm.inputEndDate}</h3>
+          {experienceForm.map(item => {
+            return (
+              <div key={crypto.randomUUID()}>
+                <h3>{item.inputJobTitle}</h3>
+                <h3>{item.inputCompany}</h3>
+                <h3>{item.inputDescription}</h3>
+                <h3>{item.inputStartDate}</h3>
+                <h3>{item.inputEndDate}</h3>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

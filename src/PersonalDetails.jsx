@@ -9,7 +9,14 @@ export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
   const [inputEmail, setInputEmail] = useState('');
   const [inputAddress, setInputAddress] = useState('');
   const [inputPhone, setInputPhone] = useState('');
-  const [showed, setShowed] = useState(false);
+  const [showed, setShowed] = useState(false); 
+
+  function clearPersonalDetailsInputs() { 
+    setInputName('');
+    setInputEmail('');
+    setInputAddress('');
+    setInputPhone('');
+  }
 
   return (
     <>
@@ -30,35 +37,45 @@ export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
           <label>Full Name: </label>
           <input
             type="text"
+            value={inputName}
             onChange={e => setInputName(e.target.value)}
           ></input>
           <label>E-Mail:</label>
           <input
             type="text"
+            value={inputEmail}
             onChange={e => setInputEmail(e.target.value)}
           ></input>
           <label>Address: </label>
           <input
             type="text"
+            value={inputAddress}
             onChange={e => setInputAddress(e.target.value)}
           ></input>
           <label>Phone Number:</label>
           <input
             type="text"
+            value={inputPhone}
             onChange={e => setInputPhone(e.target.value)}
           ></input>
           <div className="personal-details-btn-container">
             <button
-              onClick={e =>
-                handleSubmit(e, inputName, inputEmail, inputAddress, inputPhone)
-              }
+              onClick={e => {
+                handleSubmit(
+                  e,
+                  inputName,
+                  inputEmail,
+                  inputAddress,
+                  inputPhone,
+                );
+                clearPersonalDetailsInputs();
+              }}
               type="submit"
             >
               Submit
             </button>
             <button>Save</button>
           </div>
-          {/* </form> */}
         </form>
 
         <div className="personal-details-form-content">
