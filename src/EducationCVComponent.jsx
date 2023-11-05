@@ -6,7 +6,7 @@ export default function EducationCVComponent({ educationForm }) {
   return <> 
     <div className="education-cv-component-container">
       {educationForm.map(item => {
-        return <div key={crypto.randomUUID()}>
+        return <div className='education-content-container' key={crypto.randomUUID()}>
             <h3>{item.schoolNameInput}</h3>
             <h3>{item.degreeInput}</h3>
             <h3>{item.startDateInput}</h3>

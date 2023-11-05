@@ -98,12 +98,14 @@ export default function Education({ handleSubmit, educationForm }) {
           <h3>{educationForm.locationInput}</h3> */}
           {educationForm.map(item => {
             return (
-              <div key={crypto.randomUUID()}>
+              <div key={crypto.randomUUID()} className='education-content-below-form'>
                 <h3>{item.schoolNameInput}</h3>
                 <h3>{item.degreeInput}</h3>
                 <h3>{item.startDateInput}</h3>
                 <h3>{item.endDateInput}</h3>
                 <h3>{item.locationInput}</h3>
+                <button>Edit</button>
+                <button>Delete</button>
               </div>
             );
           })}

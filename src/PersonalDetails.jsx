@@ -18,6 +18,7 @@ export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
     setInputPhone('');
   }
 
+
   return (
     <>
       <div className="personal-details-container">
@@ -83,6 +84,16 @@ export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
           <h3>{personalDetailsForm.inputEmail}</h3>
           <h3>{personalDetailsForm.inputAddress}</h3>
           <h3>{personalDetailsForm.inputPhone}</h3>
+          {/* {personalDetailsForm.map(item => { 
+            return (
+              <div key={crypto.randomUUID()}>
+                <h3>{item.inputName}</h3>
+                <h3>{item.inputEmail}</h3>
+                <h3>{item.inputAddress}</h3>
+                <h3>{item.inputPhone}</h3>
+              </div>
+            );
+          })} */}
         </div>
       </div>
     </>

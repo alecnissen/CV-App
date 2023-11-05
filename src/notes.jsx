@@ -384,5 +384,35 @@
 
 // clear feature implemented, 
 // now begin more styling on the cv component side to make sure things to start to line up, 
-// start with the personal details section, then move onto the next section, 
+// start with the personal details section, then move onto the next section,   
 // basic styling, making sure things are more or less in the right place 
+
+// What I want to do next is to just experiment with different sizes for the cv component on the ui
+
+// then I will begin to try to implement edit and delete functions, 
+// First I will begin with edit, 
+
+// I will first add a button in the component when rendered
+
+// trying to dynamically create the button to edit the specific form component, 
+// WHAT I'VE TRIED
+// adding a button on render, 
+// returning a button from a function and trying to call it 
+ 
+
+// how to edit form data, 
+// click on edit button and it will return to the form with those particular inputs listed for that card/data 
+
+// add the same base styling for experience section content under the form
+
+// how to access the particular info for that specific section of content, 
+// when I click on the edit btn for a particular piece of section 
+// it should re-popular the input fields with the data from the form, 
+// determine what piece of content was clicked, 
+// re-popular input fields with the content was submitted for that section 
+
+// how do I access that particular state with the btn click? 
+
+// I dont know how to access the particular content that was clicked on when user presses edit btn for that section, 
+// ID's a loop? 
+// its not clear 

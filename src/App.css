@@ -17,6 +17,12 @@
     grid-column-start: 1;
 }
 
+#cv-page { 
+    background-color: rgb(233, 214, 214);
+    width: 600px;
+    height: 700px;
+}
+
 .personal-details-container { 
     display: flex;
     flex-direction: column;
@@ -27,8 +33,35 @@
     align-items: center;
     border-radius: 10%;
     border: 5px solid black;
-    width: 80%;
+    width: 70%;
 } 
+
+.personal-details-CV-component-container { 
+    padding: 10px;
+    background-color: blue;
+}
+
+.personal-details-CV-component-container > h3 { 
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+} 
+
+.email-address-container-personal-details { 
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+/* .personal-details-CV-component-container > p { 
+    display: flex;
+} */
+
+/* .personal-details-name-header-container { 
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+} */
 
 .hide-show-content-personal-details { 
     display: flex;
@@ -48,7 +81,7 @@
 .personal-details-container input { 
     /* width: min(15em); */
     width: 15em;
-    font-size: 1.2rem;
+    /* font-size: 1rem; */
 } 
 
 .personal-details-btn-container button { 
@@ -59,7 +92,17 @@
 
 .dropdown-icon-personal-details img { 
     width: 30px;
-}
+} 
+
+.education-section-main-header,
+.experience-section-main-header { 
+    border-bottom: 2px solid black;
+} 
+
+.education-content-container { 
+    display: flex;
+    gap: 2em;
+} 
 
 .education-input-container { 
     display: flex;
@@ -71,13 +114,31 @@
     align-items: center;
     border-radius: 10%;
     border: 5px solid black;
-    width: 80%;
+    width: 70%;
 } 
 
 .hide-show-content-education-details { 
     display: flex;
     flex-direction: column;
+} 
+
+.education-form-content { 
+    display: flex;
+    flex-direction: column;
+} 
+
+.education-content-below-form { 
+    display: flex;
+    /* gap: 1em; */
+    border: 2px solid black;
+} 
+
+.education-content-below-form button { 
+    font-size: 1.2rem;
+    background-color: gray;
+    width: 20%;
 }
+
 
 .education-input-container > h3 { 
     text-decoration: underline;
@@ -91,13 +152,19 @@
 
 .education-input-container input { 
     width: 15em;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 } 
 
 .education-btns-container button { 
     font-size: 1.2rem;
     margin: 2em;
     border-radius: 10%;
+} 
+
+.experience-content-container { 
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
 }
 
 .professional-experience-form-container { 
@@ -110,7 +177,7 @@
     align-items: center;
     border-radius: 10%;
     border: 5px solid black;
-    width: 80%;
+    width: 70%;
 } 
 
 .hide-show-content-experience { 
@@ -135,7 +202,7 @@
 
 .professional-experience-form-container input { 
     width: 15em;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 } 
 
 .professional-experience-btn-containers button { 
@@ -156,7 +223,27 @@
     text-align: center;
 }
 
-.professional-experience-cv-component-container { 
+/* .professional-experience-cv-component-container { 
     text-align: center;
+    display: flex;
+} */
+
+
+
+.experience-form-content { 
+    display: flex;
+    flex-direction: column;
+} 
+
+.experience-content-below-form { 
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    border: 2px solid black;
 }
 
+.experience-content-below-form button { 
+    font-size: 1.2rem;
+    background-color: gray;
+    /* width: 15%; */
+}

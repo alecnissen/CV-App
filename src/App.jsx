@@ -94,9 +94,11 @@ export default function App() {
           personalDetailsForm={personalDetailsForm}
           // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetailsCVComponent>
+        <h3 className='education-section-main-header'>Education</h3>
         <EducationCVComponent
           educationForm={educationForm}
         ></EducationCVComponent>
+        <h3 className='experience-section-main-header'>Professional Experience</h3>
         <ProfessionalExperienceCVComponent
           experienceForm={experienceForm}
         ></ProfessionalExperienceCVComponent>

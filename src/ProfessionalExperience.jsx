@@ -85,12 +85,14 @@ export default function ProfessionalExperience({ handleSubmit, experienceForm })
         <div className="experience-form-content">
           {experienceForm.map(item => {
             return (
-              <div key={crypto.randomUUID()}>
+              <div key={crypto.randomUUID()} className='experience-content-below-form'>
                 <h3>{item.inputJobTitle}</h3>
                 <h3>{item.inputCompany}</h3>
                 <h3>{item.inputDescription}</h3>
                 <h3>{item.inputStartDate}</h3>
                 <h3>{item.inputEndDate}</h3>
+                <button>Edit</button>
+                <button>Delete</button>
               </div>
             );
           })}

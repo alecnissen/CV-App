@@ -5,7 +5,10 @@ export default function ProfessionalExperienceCVComponent({ experienceForm }) {
       <div className="professional-experience-cv-component-container">
         {experienceForm.map(item => {
           return (
-            <div key={crypto.randomUUID()}>
+            <div
+              className="experience-content-container"
+              key={crypto.randomUUID()}
+            >
               <h3>{item.inputJobTitle}</h3>
               <h3>{item.inputCompany}</h3>
               <h3>{item.inputDescription}</h3>
