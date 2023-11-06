@@ -14,6 +14,8 @@ export default function Education({ handleSubmit, educationForm }) {
   const [locationInput, setLocationInput] = useState('');
   const [showedEducation, setShowedEducation] = useState(false); 
 
+
+
    function clearEducationInputs( ) {
     setSchoolNameInput(''); 
     setDegreeInput('');
@@ -22,6 +24,29 @@ export default function Education({ handleSubmit, educationForm }) {
     setLocationInput('');
     setShowedEducation('');
   } 
+
+  // if we found the item we clicked on, replace the state but remove the old one. 
+
+  function handleEdit(index) { 
+    {educationForm.map(index, item => { 
+    if  (item.key == item.key) { 
+      item.splice(index, 1);
+        setSchoolNameInput(item.schoolNameInput);
+        setDegreeInput(item.degreeInput);
+        setStartDateInput(item.startDateInput);
+        setEndDateInput(item.endDateInput);
+        setLocationInput(item.locationInput);
+    }
+    })}
+  } 
+
+  function handleDelete() { 
+      {
+        educationForm.filter(item => {
+         (item.key == item.key) 
+        });
+      }
+  }
 
   return (
     <>
@@ -104,8 +129,8 @@ export default function Education({ handleSubmit, educationForm }) {
                 <h3>{item.startDateInput}</h3>
                 <h3>{item.endDateInput}</h3>
                 <h3>{item.locationInput}</h3>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button onClick={handleEdit}>Edit</button>
+                <button onClick={handleDelete}>Delete</button>
               </div>
             );
           })}

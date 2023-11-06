@@ -416,3 +416,6 @@
 // I dont know how to access the particular content that was clicked on when user presses edit btn for that section, 
 // ID's a loop? 
 // its not clear 
+
+// edit btn logic, 
+// should edit the same data, and once submit is pressed it should update/save the data instead of creating a new one, 

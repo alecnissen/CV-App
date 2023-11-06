@@ -39,7 +39,7 @@ export default function App() {
       startDateInput: startDateInput,
       endDateInput: endDateInput,
       locationInput: locationInput,
-    };
+    }; 
     setEducationForm([...educationForm, updatedInfo])
   } 
 
