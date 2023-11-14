@@ -10,7 +10,13 @@
     left: 75%;
     font-size: 1.2rem;
     text-decoration: underline;
+    color: white;
+    font-family: sans-serif;
 } 
+
+body { 
+    background-color: darkblue;
+}
 
 
 #form { 
@@ -18,9 +24,11 @@
 }
 
 #cv-page { 
-    background-color: rgb(233, 214, 214);
-    width: 600px;
-    height: 700px;
+    background-color: white;
+    width: 800px;
+    height: 900px;
+    border: 5px solid black;
+    font-family: sans-serif;
 }
 
 .personal-details-container { 
@@ -28,17 +36,20 @@
     flex-direction: column;
     grid-column-start: 1;
     font-size: 1.2rem;
-    background-color: rgb(218, 206, 206);
+    font-family: sans-serif;
+    /* background-color: rgb(218, 206, 206); */
+    background-color: rgb(11, 118, 160);
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 5%;
     border: 5px solid black;
-    width: 70%;
+    width: 50%;
+    color: white;
 } 
 
 .personal-details-CV-component-container { 
     padding: 10px;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .personal-details-CV-component-container > h3 { 
@@ -46,6 +57,13 @@
     justify-content: center;
     font-size: 2.5rem;
 } 
+
+.personal-details-form-content { 
+    display: flex;
+    gap: 1em;
+    font-size: 0.8rem;
+    /* border: 2px solid black; */
+}
 
 .email-address-container-personal-details { 
     display: flex;
@@ -109,12 +127,15 @@
     flex-direction: column;
     grid-column-start: 1;
     font-size: 1.2rem;
-    background-color: rgb(218, 206, 206);
+    font-family: sans-serif;
+    /* background-color: rgb(218, 206, 206); */
+    background-color: rgb(11, 118, 160);
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 5%;
     border: 5px solid black;
-    width: 70%;
+    width: 50%;
+    color: white;
 } 
 
 .hide-show-content-education-details { 
@@ -131,12 +152,13 @@
     display: flex;
     /* gap: 1em; */
     border: 2px solid black;
+    font-size: 0.8rem;
 } 
 
 .education-content-below-form button { 
     font-size: 1.2rem;
-    background-color: gray;
-    width: 20%;
+    /* background-color: gray; */
+    /* width: 20%; */
 }
 
 
@@ -155,6 +177,16 @@
     /* font-size: 1.2rem; */
 } 
 
+.education-btns-container-below-form { 
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 100%; */
+} 
+
+.education-btns-container-below-form button { 
+    font-size: 1rem;
+}
+
 .education-btns-container button { 
     font-size: 1.2rem;
     margin: 2em;
@@ -172,12 +204,15 @@
     flex-direction: column;
     grid-column-start: 1;
     font-size: 1.2rem;
-    background-color: rgb(218, 206, 206);
+    font-family: sans-serif;
+    /* background-color: rgb(218, 206, 206); */
+    background-color: rgb(11, 118, 160);
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 5%;
     border: 5px solid black;
-    width: 70%;
+    width: 50%;
+    color: white;
 } 
 
 .hide-show-content-experience { 
@@ -240,10 +275,11 @@
     flex-direction: row;
     gap: 1em;
     border: 2px solid black;
+    font-size: 0.8rem;
 }
 
 .experience-content-below-form button { 
     font-size: 1.2rem;
-    background-color: gray;
+    /* background-color: gray; */
     /* width: 15%; */
 }

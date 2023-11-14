@@ -25,27 +25,45 @@ export default function Education({ handleSubmit, educationForm }) {
     setShowedEducation('');
   } 
 
-  // if we found the item we clicked on, replace the state but remove the old one. 
 
-  function handleEdit(index) { 
-    {educationForm.map(index, item => { 
-    if  (item.key == item.key) { 
-      item.splice(index, 1);
-        setSchoolNameInput(item.schoolNameInput);
-        setDegreeInput(item.degreeInput);
-        setStartDateInput(item.startDateInput);
-        setEndDateInput(item.endDateInput);
-        setLocationInput(item.locationInput);
-    }
-    })}
+  function handleEdit(index) {
+    // for (let item of educationForm) {
+    //   if (item.key == item.key) {
+    //         setSchoolNameInput(item.schoolNameInput);
+    //         setDegreeInput(item.degreeInput);
+    //         setStartDateInput(item.startDateInput);
+    //         setEndDateInput(item.endDateInput);
+    //         setLocationInput(item.locationInput);
+    //   }
+    // }
+
+        // {educationForm.map(index, item => {
+        //  //  console.log(educationForm);
+        //   if (item.key == item.key) {
+        //     item.splice(index, 1); 
+        //     // if we found the selected item, change the state of the variables 
+        //     setSchoolNameInput(item.schoolNameInput);
+        //     setDegreeInput(item.degreeInput);
+        //     setStartDateInput(item.startDateInput);
+        //     setEndDateInput(item.endDateInput);
+        //     setLocationInput(item.locationInput);
+        //   }
+        // })} 
+
+       for (let i = 0; i < educationForm.length; i++) { 
+        let item = educationForm[i]; 
+        console.log(item);
+       }
+      
   } 
 
-  function handleDelete() { 
-      {
-        educationForm.filter(item => {
-         (item.key == item.key) 
-        });
-      }
+  function handleDelete(index) { 
+    let educationFormArr = Array.from(educationForm);
+      {educationFormArr.map(index, item => {
+        if (item.key == item.key) {
+          item.splice(index, 1);
+        }
+      });}
   }
 
   return (
@@ -129,8 +147,11 @@ export default function Education({ handleSubmit, educationForm }) {
                 <h3>{item.startDateInput}</h3>
                 <h3>{item.endDateInput}</h3>
                 <h3>{item.locationInput}</h3>
+                
+                <div className='education-btns-container-below-form'> 
                 <button onClick={handleEdit}>Edit</button>
                 <button onClick={handleDelete}>Delete</button>
+                </div>
               </div>
             );
           })}

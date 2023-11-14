@@ -419,3 +419,26 @@
 
 // edit btn logic, 
 // should edit the same data, and once submit is pressed it should update/save the data instead of creating a new one, 
+
+
+// very confused on edit and delete functionality, 
+// for now just clean up styles, 
+// go thru the page and see what you can spot to work on 
+
+
+//  *** 11/13 
+
+// work on edit btn functionality, 
+// I want it so when an entry is made, and the btn ic clicked on, 
+// it will bring back the details of the selected entry 
+// it will edit and change the state of the entry, without creating a new entry, 
+// the problem right now, is that it is creating a brand new entry instead of editing the selected entry, 
+// // *** if we found the item we clicked on, replace the state but remove the old one. 
+
+// I will spend 15 minutes forming a gameplan, understanding the code, 
+// then I will ask for help. 
+
+// If I remove the index, and the splice line, it will bring back entry details, when edit btn is clicked, 
+// if I keep the index, and the splice line, I Will receive the object is not a function error, 
+//  
+// 
