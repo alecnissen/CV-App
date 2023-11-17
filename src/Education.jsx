@@ -6,7 +6,7 @@ import App from './App';
 
 
 
-export default function Education({ handleSubmit, educationForm }) {
+export default function Education({ handleSubmit, educationForm, setEducationForm }) {
   const [schoolNameInput, setSchoolNameInput] = useState('');
   const [degreeInput, setDegreeInput] = useState('');
   const [startDateInput, setStartDateInput] = useState('');
@@ -26,35 +26,24 @@ export default function Education({ handleSubmit, educationForm }) {
   } 
 
 
-  function handleEdit(index) {
-    // for (let item of educationForm) {
-    //   if (item.key == item.key) {
-    //         setSchoolNameInput(item.schoolNameInput);
-    //         setDegreeInput(item.degreeInput);
-    //         setStartDateInput(item.startDateInput);
-    //         setEndDateInput(item.endDateInput);
-    //         setLocationInput(item.locationInput);
-    //   }
-    // }
-
-        // {educationForm.map(index, item => {
-        //  //  console.log(educationForm);
-        //   if (item.key == item.key) {
-        //     item.splice(index, 1); 
-        //     // if we found the selected item, change the state of the variables 
-        //     setSchoolNameInput(item.schoolNameInput);
-        //     setDegreeInput(item.degreeInput);
-        //     setStartDateInput(item.startDateInput);
-        //     setEndDateInput(item.endDateInput);
-        //     setLocationInput(item.locationInput);
-        //   }
-        // })} 
+  function handleEdit(e) {
+     
+      let selectedEntry = e.target.name;
 
        for (let i = 0; i < educationForm.length; i++) { 
         let item = educationForm[i]; 
-        console.log(item);
+        if (item.key === selectedEntry) {
+          educationForm.splice(i, 1);
+          setSchoolNameInput(item.schoolNameInput);
+          setDegreeInput(item.degreeInput);
+          setStartDateInput(item.startDateInput);
+          setEndDateInput(item.endDateInput);
+          setLocationInput(item.locationInput);
+          // setEducationForm(educationForm);
+        }  
+        // console.log(item);
+        setEducationForm([...educationForm, item]);
        }
-      
   } 
 
   function handleDelete(index) { 
@@ -63,7 +52,7 @@ export default function Education({ handleSubmit, educationForm }) {
         if (item.key == item.key) {
           item.splice(index, 1);
         }
-      });}
+      })}
   }
 
   return (
@@ -140,16 +129,18 @@ export default function Education({ handleSubmit, educationForm }) {
           <h3>{educationForm.endDateInput}</h3>
           <h3>{educationForm.locationInput}</h3> */}
           {educationForm.map(item => {
-            return (
-              <div key={crypto.randomUUID()} className='education-content-below-form'>
+            return ( 
+              <div key={item.key} name={item.key} className='education-content-below-form'>
                 <h3>{item.schoolNameInput}</h3>
                 <h3>{item.degreeInput}</h3>
                 <h3>{item.startDateInput}</h3>
                 <h3>{item.endDateInput}</h3>
-                <h3>{item.locationInput}</h3>
+                <h3>{item.locationInput}</h3> 
                 
                 <div className='education-btns-container-below-form'> 
-                <button onClick={handleEdit}>Edit</button>
+                <button onClick={e => { 
+                  handleEdit(e)
+                }} name={item.key}>Edit</button>
                 <button onClick={handleDelete}>Delete</button>
                 </div>
               </div>

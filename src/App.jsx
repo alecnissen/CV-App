@@ -39,6 +39,7 @@ export default function App() {
       startDateInput: startDateInput,
       endDateInput: endDateInput,
       locationInput: locationInput,
+      key: crypto.randomUUID(),
     }; 
     setEducationForm([...educationForm, updatedInfo])
   } 
@@ -81,6 +82,7 @@ export default function App() {
         <Education
           handleSubmit={handleSubmitEducation}
           educationForm={educationForm}
+          setEducationForm={setEducationForm}
           // clearEducationForm={clearEducationForm}
         ></Education>
         <ProfessionalExperience
@@ -94,11 +96,13 @@ export default function App() {
           personalDetailsForm={personalDetailsForm}
           // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetailsCVComponent>
-        <h3 className='education-section-main-header'>Education</h3>
+        <h3 className="education-section-main-header">Education</h3>
         <EducationCVComponent
           educationForm={educationForm}
         ></EducationCVComponent>
-        <h3 className='experience-section-main-header'>Professional Experience</h3>
+        <h3 className="experience-section-main-header">
+          Professional Experience
+        </h3>
         <ProfessionalExperienceCVComponent
           experienceForm={experienceForm}
         ></ProfessionalExperienceCVComponent>
