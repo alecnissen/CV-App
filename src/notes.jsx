@@ -442,3 +442,70 @@
 // if I keep the index, and the splice line, I Will receive the object is not a function error, 
 //  
 // 
+
+// ** question Why am I getting this error and how can I fix it, duplicate keys error 
+
+// trying to get the edit btn working, content is rendered below the input form as well as the cv portion. I have created a seperate key for the both of them
+// but when I create two or more entries in the education form, and click the different edit btns on the data, an error pops up saying I have dupicate keys 
+
+// I Know this could be an issue of mapping on the same list twice or a duplicate entry getting added to the educationForm array, 
+// however, I am using two different keys when mapping, I'm not sure where the duplication is happening. 
+// WHen I make multiple entries and click any edit btn it deletes the last entry, and replaces it with the latest one 
+// 
+// 
+
+// edit btn working, 
+// I create two or more entries click on an edit btn on the form content, it will delete the previous entry and replace it with the content associated with that edit btn that was pressed \
+// I have tried creating two sets of unique keys for each section education and cv, 
+// 
+// 
+// when I create two or more entries then click the edit btn on the latest entry it will delete the first entry 
+// and replace the first entry with whatever was clicked on, 
+
+
+
+// I want it so when user pressed edit, it will re-populate the fields with the data, 
+// the user can make their edits, then press submit and it modifys the existing entry instead of creating a brand new one, 
+
+// currently it will create a brand new entry, instead of modiying the selected entry, 
+// I also notice that when I create two or more entries and press the edit button on any of them
+// that it will remove the first entry and replace it with the second entry, 
+// I am not sure why that behavior is occuring. 
+
+// I've tried using seperate keys for each section both form and cv, following the stack trace, 
+// but following the trace I cannot see where the problem could lie, 
+// my guess is that items are being added to the educationForm array twice. 
+// 
+// looks like keys are being duplicated twice, I can create different entries, 
+
+// Attach repo, so currently working in Eduction.jsx file, 
+// the handleEdit function, give line # 
+// the handleEdit is called within a button, 
+// also content is also rendered in the cv portion, so the educationCV file 
+// 
+
+// I notice when I remove the splice line, and the setEducationForm line, 
+// the error will go away, 
+// My thinking for using splice is that if the entry from the array matches the entry that was clicked on, 
+// remove that item, then we re-update the state, making a new array and adding the new item, 
+
+
+// What I want: When content is generated is below form, user can click an edit btn which will allow user to modify the input fields and update the selected entry 
+
+// The problem: Right now it will create a brand new entry instead of modifying the selected entry 
+
+// What I've tried: Previously I was trying to use splice, to remove the old entry and make way for the new,
+
+// but that lead to some errors which inclded duplication of keys, 
+
+// I am using two different keys for content render, keyForm and keyCV 
+
+// Now when I remove this line, splice, and remove the re-updating state line 
+
+// the key error is gone and now the only problem is the making new entry ijnstead of modifying the entry 
+
+// I am thinking I need to somehow remove the old entry from the educationForm array 
+
+// I also tried using filter, 
+
+// 

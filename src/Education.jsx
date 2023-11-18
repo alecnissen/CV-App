@@ -28,31 +28,43 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
 
   function handleEdit(e) {
      
-      let selectedEntry = e.target.name;
+      let selectedEntry = e.target.name; 
+      console.log(selectedEntry);
 
        for (let i = 0; i < educationForm.length; i++) { 
+        console.log(educationForm);
         let item = educationForm[i]; 
-        if (item.key === selectedEntry) {
-          educationForm.splice(i, 1);
+        if (item.keyForm === selectedEntry) {
+          educationForm.splice(item, 1);
           setSchoolNameInput(item.schoolNameInput);
           setDegreeInput(item.degreeInput);
           setStartDateInput(item.startDateInput);
           setEndDateInput(item.endDateInput);
-          setLocationInput(item.locationInput);
-          // setEducationForm(educationForm);
+          setLocationInput(item.locationInput); 
         }  
-        // console.log(item);
         setEducationForm([...educationForm, item]);
        }
   } 
 
-  function handleDelete(index) { 
-    let educationFormArr = Array.from(educationForm);
-      {educationFormArr.map(index, item => {
-        if (item.key == item.key) {
-          item.splice(index, 1);
-        }
-      })}
+  // 
+  // function handleEdit(e) { 
+  //    let selectedEntry = e.target.name; 
+
+  //   educationForm.filter(item => { 
+  //      item !== selectedEntry
+  //    })
+  // }
+
+  function handleDelete(e) { 
+    let selectedEntry = e.target.name;
+
+    for (let i = 0; i < educationForm.length; i++) { 
+      let item = educationForm[i];
+      if (item.key === selectedEntry) { 
+        educationForm.splice(item, 1);
+      }
+    }
+    setEducationForm([...educationForm])
   }
 
   return (
@@ -129,19 +141,31 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
           <h3>{educationForm.endDateInput}</h3>
           <h3>{educationForm.locationInput}</h3> */}
           {educationForm.map(item => {
-            return ( 
-              <div key={item.key} name={item.key} className='education-content-below-form'>
+            return (
+              <div key={item.keyForm} className="education-content-below-form">
                 <h3>{item.schoolNameInput}</h3>
                 <h3>{item.degreeInput}</h3>
                 <h3>{item.startDateInput}</h3>
                 <h3>{item.endDateInput}</h3>
-                <h3>{item.locationInput}</h3> 
-                
-                <div className='education-btns-container-below-form'> 
-                <button onClick={e => { 
-                  handleEdit(e)
-                }} name={item.key}>Edit</button>
-                <button onClick={handleDelete}>Delete</button>
+                <h3>{item.locationInput}</h3>
+
+                <div className="education-btns-container-below-form">
+                  <button
+                    onClick={e => {
+                      handleEdit(e);
+                    }}
+                    name={item.keyForm}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={e => {
+                      handleDelete(e);
+                    }}
+                    name={item.keyForm}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             );

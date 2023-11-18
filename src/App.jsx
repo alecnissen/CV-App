@@ -11,9 +11,6 @@ import { useState } from 'react';
 
 export default function App() { 
 
-  // init state object that will hold all the personalDetails form entries 
-  // 
-
   const [personalDetailsForm, setPersonalDetailsForm] = useState('');
   const [educationForm, setEducationForm] = useState([]);
   const [experienceForm, setExperienceForm] = useState([]);
@@ -39,7 +36,8 @@ export default function App() {
       startDateInput: startDateInput,
       endDateInput: endDateInput,
       locationInput: locationInput,
-      key: crypto.randomUUID(),
+      keyForm: crypto.randomUUID(),
+      keyCV: crypto.randomUUID(),
     }; 
     setEducationForm([...educationForm, updatedInfo])
   } 
