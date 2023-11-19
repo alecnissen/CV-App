@@ -508,4 +508,11 @@
 
 // I also tried using filter, 
 
+
+// 11/18
+
 // 
+
+// 11/19 
+
+// take notes on the article that cake linked, 

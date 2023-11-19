@@ -26,24 +26,44 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
   } 
 
 
-  function handleEdit(e) {
+  // function handleEdit(e) {
      
-      let selectedEntry = e.target.name; 
-      console.log(selectedEntry);
+  //     let selectedEntry = e.target.name; 
+  //     console.log(selectedEntry);
 
-       for (let i = 0; i < educationForm.length; i++) { 
-        console.log(educationForm);
-        let item = educationForm[i]; 
-        if (item.keyForm === selectedEntry) {
-          educationForm.splice(item, 1);
-          setSchoolNameInput(item.schoolNameInput);
-          setDegreeInput(item.degreeInput);
-          setStartDateInput(item.startDateInput);
-          setEndDateInput(item.endDateInput);
-          setLocationInput(item.locationInput); 
-        }  
-        setEducationForm([...educationForm, item]);
-       }
+  //      for (let i = 0; i < educationForm.length; i++) { 
+  //       console.log(educationForm);
+  //       let item = educationForm[i]; 
+  //       if (item.keyForm === selectedEntry) {
+  //         // educationForm.splice(item, 1);
+  //         setSchoolNameInput(item.schoolNameInput);
+  //         setDegreeInput(item.degreeInput);
+  //         setStartDateInput(item.startDateInput);
+  //         setEndDateInput(item.endDateInput);
+  //         setLocationInput(item.locationInput); 
+  //       }  
+  //       setEducationForm([...educationForm]);
+  //      }
+  // } 
+
+  function handleEdit(e) { 
+    let selectedEntry = e.target.name; 
+
+    {educationForm.map(item => { 
+      if (item.keyForm !== selectedEntry) { 
+        return item;
+      } else {
+        // re-updating the state here,
+        setSchoolNameInput(item.schoolNameInput);
+        setDegreeInput(item.degreeInput);
+        setStartDateInput(item.startDateInput);
+        setEndDateInput(item.endDateInput);
+        setLocationInput(item.locationInput);
+
+        // setting the educationForm, making a copy of the array w/updated values? 
+        setEducationForm([...educationForm]);
+      }
+    })}
   } 
 
   // 
@@ -53,14 +73,14 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
   //   educationForm.filter(item => { 
   //      item !== selectedEntry
   //    })
-  // }
+  // } 
 
   function handleDelete(e) { 
     let selectedEntry = e.target.name;
 
     for (let i = 0; i < educationForm.length; i++) { 
       let item = educationForm[i];
-      if (item.key === selectedEntry) { 
+      if (item.keyForm === selectedEntry) { 
         educationForm.splice(item, 1);
       }
     }
