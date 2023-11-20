@@ -1,20 +1,30 @@
 import React, { useState } from 'react'
 import ProfessionalExperienceCVComponent from './ProfessionalExperienceCVComponent';
 
-export default function ProfessionalExperience({ handleSubmit, experienceForm }) {
+export default function ProfessionalExperience({
+  handleSubmit,
+  experienceForm,
+  setExperienceForm,
+}) {
   const [inputJobTitle, setInputJobTitle] = useState('');
   const [inputCompany, setInputCompany] = useState('');
   const [inputDescription, setInputDescription] = useState('');
   const [inputStartDate, setInputStartDate] = useState('');
   const [inputEndDate, setInputEndDate] = useState('');
-  const [showedExperience, setShowedExperience] = useState(false); 
+  const [showedExperience, setShowedExperience] = useState(false);
 
-  function clearExperienceInputs() { 
+  function clearExperienceInputs() {
     setInputJobTitle('');
     setInputCompany('');
     setInputDescription('');
     setInputStartDate('');
     setInputEndDate('');
+  }
+
+  function handleDelete(e) {
+    let clickedOnEntry = e.target.name;
+
+    setExperienceForm(experienceForm.filter(item => item.keyForm !== clickedOnEntry));
   }
 
   return (
@@ -85,14 +95,21 @@ export default function ProfessionalExperience({ handleSubmit, experienceForm })
         <div className="experience-form-content">
           {experienceForm.map(item => {
             return (
-              <div key={crypto.randomUUID()} className='experience-content-below-form'>
+              <div key={item.keyForm} className="experience-content-below-form">
                 <h3>{item.inputJobTitle}</h3>
                 <h3>{item.inputCompany}</h3>
-                <h3>{item.inputDescription}</h3>
                 <h3>{item.inputStartDate}</h3>
                 <h3>{item.inputEndDate}</h3>
-                <button>Edit</button>
-                <button>Delete</button>
+                <h3>{item.inputDescription}</h3>
+                <button name={item.keyForm}>Edit</button>
+                <button
+                  onClick={e => {
+                    handleDelete(e);
+                  }}
+                  name={item.keyForm}
+                >
+                  Delete
+                </button>
               </div>
             );
           })}

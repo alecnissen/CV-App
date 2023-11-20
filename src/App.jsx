@@ -11,7 +11,7 @@ import { useState } from 'react';
 
 export default function App() { 
 
-  const [personalDetailsForm, setPersonalDetailsForm] = useState('');
+  const [personalDetailsForm, setPersonalDetailsForm] = useState([]);
   const [educationForm, setEducationForm] = useState([]);
   const [experienceForm, setExperienceForm] = useState([]);
 
@@ -22,8 +22,12 @@ export default function App() {
       inputEmail: inputEmail,
       inputAddress: inputAddress,
       inputPhone: inputPhone,
+      keyForm: crypto.randomUUID(),
+      keyCV: crypto.randomUUID(),
     };
-    setPersonalDetailsForm(updatedInfo);
+    // setPersonalDetailsForm(updatedInfo); 
+
+     setPersonalDetailsForm([...personalDetailsForm, updatedInfo]);
 
     // setPersonalDetailsFormArray(updatedInfo);
   } 
@@ -62,6 +66,8 @@ export default function App() {
       inputDescription: inputDescription,
       inputStartDate: inputStartDate,
       inputEndDate: inputEndDate,
+      keyForm: crypto.randomUUID(),
+      keyCV: crypto.randomUUID(),
     };
     setExperienceForm([...experienceForm, updatedInfo]);
   }
@@ -75,6 +81,7 @@ export default function App() {
         <PersonalDetails
           handleSubmit={handleSubmitPersonal}
           personalDetailsForm={personalDetailsForm}
+          setPersonalDetailsForm={setPersonalDetailsForm}
           // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetails>
         <Education
@@ -86,6 +93,7 @@ export default function App() {
         <ProfessionalExperience
           handleSubmit={handleSubmitExperience}
           experienceForm={experienceForm}
+          setExperienceForm={setExperienceForm}
         ></ProfessionalExperience>
       </div>
 

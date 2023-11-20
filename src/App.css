@@ -60,9 +60,10 @@ body {
 
 .personal-details-form-content { 
     display: flex;
+    /* flex-direction: column; */
     gap: 1em;
     font-size: 0.8rem;
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 
 .email-address-container-personal-details { 
@@ -107,6 +108,17 @@ body {
     margin: 2em;
     border-radius: 10%;
 } 
+
+.personal-details-btns-container-below-form { 
+    display: flex;
+    /* flex-direction: column; */
+} 
+
+.personal-details-btns-container-below-form button { 
+    font-size: 1rem;
+}   
+
+
 
 .dropdown-icon-personal-details img { 
     width: 30px;
@@ -185,7 +197,8 @@ body {
 
 .education-btns-container-below-form button { 
     font-size: 1rem;
-}
+} 
+
 
 .education-btns-container button { 
     font-size: 1.2rem;
@@ -282,4 +295,8 @@ body {
     font-size: 1.2rem;
     /* background-color: gray; */
     /* width: 15%; */
+}
+
+.professional-experience-description-content { 
+    display: block;
 }

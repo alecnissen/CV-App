@@ -516,3 +516,14 @@
 // 11/19 
 
 // take notes on the article that cake linked, 
+
+// how to determine the entry that was clicked on, 
+
+// work with cake on the edit btn using computer properties, some method tomorrow, 
+
+// tonight try to get the delete btn properly working 
+
+// how to figure out which event btn was clicked on, 
+
+// we need to fucking determine what edit btn was clicked, WE NEED TO ACCESS THE EVENT NAME!!!!!!!!!!!!!!!!!
+// WHY DOES IT KEEP FUCKING RETURNING UNDEFINED???????????????????????????

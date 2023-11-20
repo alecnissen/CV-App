@@ -4,20 +4,29 @@ import PersonalDetailsCVComponent from './PersonalDetailsCVComponent';
 import App from './App';
 
 
-export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
+export default function PersonalDetails({
+  handleSubmit,
+  personalDetailsForm,
+  setPersonalDetailsForm,
+}) {
   const [inputName, setInputName] = useState('');
   const [inputEmail, setInputEmail] = useState('');
   const [inputAddress, setInputAddress] = useState('');
   const [inputPhone, setInputPhone] = useState('');
-  const [showed, setShowed] = useState(false); 
+  const [showed, setShowed] = useState(false);
 
-  function clearPersonalDetailsInputs() { 
+  function clearPersonalDetailsInputs() {
     setInputName('');
     setInputEmail('');
     setInputAddress('');
     setInputPhone('');
   }
 
+  function handleDelete(e) {
+    let clickedOnEntry = e.target.name;
+
+    setPersonalDetailsForm(personalDetailsForm.filter(item => item.keyForm !== clickedOnEntry));
+  }
 
   return (
     <>
@@ -75,25 +84,37 @@ export default function PersonalDetails({ handleSubmit, personalDetailsForm }) {
             >
               Submit
             </button>
-            
           </div>
         </form>
 
         <div className="personal-details-form-content">
-          <h3>{personalDetailsForm.inputName}</h3>
+          {/* <h3>{personalDetailsForm.inputName}</h3>
           <h3>{personalDetailsForm.inputEmail}</h3>
           <h3>{personalDetailsForm.inputAddress}</h3>
-          <h3>{personalDetailsForm.inputPhone}</h3>
-          {/* {personalDetailsForm.map(item => { 
+          <h3>{personalDetailsForm.inputPhone}</h3> */}
+          {personalDetailsForm.map(item => {
             return (
-              <div key={crypto.randomUUID()} className="personal-details-form-content" >
+              <div key={item.keyForm} className="personal-details-form-content">
                 <h3>{item.inputName}</h3>
                 <h3>{item.inputEmail}</h3>
                 <h3>{item.inputAddress}</h3>
                 <h3>{item.inputPhone}</h3>
+
+                <div className="personal-details-btns-container-below-form">
+                  <button>Edit</button>
+
+                  <button
+                    onClick={e => {
+                      handleDelete(e);
+                    }}
+                    name={item.keyForm}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
             );
-          })} */}
+          })}
         </div>
       </div>
     </>
