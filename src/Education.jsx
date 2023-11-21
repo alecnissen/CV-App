@@ -8,94 +8,116 @@ import App from './App';
 
 
 export default function Education({ handleSubmit, educationForm, setEducationForm }) {
-  
+  // let clickedOnEntry
 
-// let clickedOnEntry 
+  // console.log(clickedOnEntry);
 
-// console.log(clickedOnEntry); 
+  // function computedProperty(obj) {
 
-// function computedProperty(obj) { 
+  // }
 
-// }
+  const [schoolNameInput, setSchoolNameInput] = useState('');
+  const [degreeInput, setDegreeInput] = useState('');
+  const [startDateInput, setStartDateInput] = useState('');
+  const [endDateInput, setEndDateInput] = useState('');
+  const [locationInput, setLocationInput] = useState('');
+  const [keyForm, setKeyForm] = useState('');
 
+  const [showedEducation, setShowedEducation] = useState(false);
 
-const [schoolNameInput, setSchoolNameInput] = useState('');
-const [degreeInput, setDegreeInput] = useState('');
-const [startDateInput, setStartDateInput] = useState('');
-const [endDateInput, setEndDateInput] = useState('');
-const [locationInput, setLocationInput] = useState('');
-const [keyForm, setKeyForm] = useState('');
+  let isEditing = educationForm.some(item => item.keyForm === keyForm);
 
-const [showedEducation, setShowedEducation] = useState(false); 
+  console.log('checking status of isEditing variable', isEditing);
 
-let isEditing = educationForm.some((item) => (item.keyForm === keyForm))
-
-console.log('checking status of isEditing variable', isEditing);
-
-
-   function clearEducationInputs( ) {
-    setSchoolNameInput(''); 
+  function clearEducationInputs() {
+    setSchoolNameInput('');
     setDegreeInput('');
-    setStartDateInput(''); 
+    setStartDateInput('');
     setEndDateInput('');
     setLocationInput('');
     setShowedEducation('');
-  } 
+  }
 
-  // old handle edit function 
+  // old handle edit function
   // function handleEdit(e) {
-     
-  //     let selectedEntry = e.target.name; 
+
+  //     let selectedEntry = e.target.name;
   //     console.log(selectedEntry);
 
-  //      for (let i = 0; i < educationForm.length; i++) { 
+  //      for (let i = 0; i < educationForm.length; i++) {
   //       console.log(educationForm);
-  //       let item = educationForm[i]; 
+  //       let item = educationForm[i];
   //       if (item.keyForm === selectedEntry) {
   //         // educationForm.splice(item, 1);
   //         setSchoolNameInput(item.schoolNameInput);
   //         setDegreeInput(item.degreeInput);
   //         setStartDateInput(item.startDateInput);
   //         setEndDateInput(item.endDateInput);
-  //         setLocationInput(item.locationInput); 
-  //       }  
+  //         setLocationInput(item.locationInput);
+  //       }
   //       setEducationForm([...educationForm]);
   //      }
-  // } 
+  // }
+
+  // *** 
+  // copy of the eductionForm array, 
+  // replace the object with the updated object, then just return it?
 
   function handleEdit(item) {
+    // setting the educationForm state with the result of using map on the education array.
 
-    // setting the educationForm state with the result of using map on the education array. 
+    setEducationForm(
+      educationForm.map(item => {
+        // if the item in education state, does not match an item submitted into state, return the item
+        // checking if the state already contains that submitted entry,
 
-    setEducationForm(educationForm.map(item => { 
-      // if the item in education state, does not match an item submitted into state, return the item
-      // checking if the state already contains that submitted entry,
-      if (item.keyForm !== keyForm) { 
-        return item;
-      } else { 
-        // else we did find the same entry (matching keys) in the array, so lets return the updated educationForm array, along with the updated object entry. 
-        return {educationForm, schoolNameInput: schoolNameInput, degreeInput: degreeInput, startDateInput: startDateInput, endDateInput: endDateInput, locationInput: locationInput}
-      }
-    })) 
+        let educationFormCopy = [...educationForm];
+
+        console.log(educationFormCopy); 
+
+        console.log(item); 
     
-    // once the edit btn is clicked, these will re-populate the input fields, with the entry content that was clicked on. 
+        if (item.keyForm !== keyForm) {
+          return item;
+        } else {
+          // else we did find the same entry (matching keys) in the array, so lets return the updated educationForm array, along with the updated object entry.
+          return {
+            educationFormCopy,
+            schoolNameInput: schoolNameInput,
+            degreeInput: degreeInput,
+            startDateInput: startDateInput,
+            endDateInput: endDateInput,
+            locationInput: locationInput,
+          };
+        }
+      }),
+    ); 
+
+    console.log({
+      schoolNameInput: schoolNameInput,
+      degreeInput: degreeInput,
+      startDateInput: startDateInput,
+      endDateInput: endDateInput,
+      locationInput: locationInput,
+    });
+
+    // once the edit btn is clicked, these will re-populate the input fields, with the entry content that was clicked on.
     setSchoolNameInput(item.schoolNameInput);
     setDegreeInput(item.degreeInput);
     setStartDateInput(item.startDateInput);
     setEndDateInput(item.endDateInput);
-    setLocationInput(item.locationInput); 
+    setLocationInput(item.locationInput);
     setKeyForm(item.keyForm);
-    
-  } 
+  }
 
-  // 
-  // function handleEdit(e) { 
-  //    let selectedEntry = e.target.name; 
+  //
+  // function handleEdit(e) {
+  //    let selectedEntry = e.target.name;
 
-  //   educationForm.filter(item => { 
+  //   educationForm.filter(item => {
   //      item !== selectedEntry
   //    })
-  // } 
+  // }
 
   function handleDelete(e) {
     // clickedOnEntry = e.target.name;
@@ -103,9 +125,10 @@ console.log('checking status of isEditing variable', isEditing);
     // setEducationForm(educationForm.filter(item => item.keyForm !== clickedOnEntry))
     let clickedOnEntry = e.target.name;
 
-    setEducationForm(educationForm.filter(item => item.keyForm !== clickedOnEntry));
-  } 
-
+    setEducationForm(
+      educationForm.filter(item => item.keyForm !== clickedOnEntry),
+    );
+  }
 
   return (
     <>
@@ -199,7 +222,7 @@ console.log('checking status of isEditing variable', isEditing);
                     Edit
                   </button>
                   <button
-                    onClick={(e) => {
+                    onClick={e => {
                       // handleDelete(e);
                       // clickedOnEntry = e.target.name;
                       // console.log(clickedOnEntry)
