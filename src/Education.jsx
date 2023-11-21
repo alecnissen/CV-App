@@ -24,7 +24,6 @@ const [degreeInput, setDegreeInput] = useState('');
 const [startDateInput, setStartDateInput] = useState('');
 const [endDateInput, setEndDateInput] = useState('');
 const [locationInput, setLocationInput] = useState('');
-
 const [keyForm, setKeyForm] = useState('');
 
 const [showedEducation, setShowedEducation] = useState(false); 
@@ -65,35 +64,28 @@ console.log('checking status of isEditing variable', isEditing);
   // } 
 
   function handleEdit(item) {
-    // let selectedEntry = e.target.name;
-    // let selectedEntry
 
-   
-        setSchoolNameInput(item.schoolNameInput);
-        setDegreeInput(item.degreeInput);
-        setStartDateInput(item.startDateInput);
-        setEndDateInput(item.endDateInput);
-        setLocationInput(item.locationInput); 
+    // setting the educationForm state with the result of using map on the education array. 
 
-        console.log(schoolNameInput);
-
-
-
-    // {educationForm.map(item => {
-    //   if (item.keyForm !== selectedEntry) {
-    //     return item;
-    //   } else {
-    //     // re-updating the state here,
-    //     setSchoolNameInput(item.schoolNameInput);
-    //     setDegreeInput(item.degreeInput);
-    //     setStartDateInput(item.startDateInput);
-    //     setEndDateInput(item.endDateInput);
-    //     setLocationInput(item.locationInput);
-
-    //     // setting the educationForm, making a copy of the array w/updated values?
-    //     setEducationForm([...educationForm]);
-    //   }
-    // })}
+    setEducationForm(educationForm.map(item => { 
+      // if the item in education state, does not match an item submitted into state, return the item
+      // checking if the state already contains that submitted entry,
+      if (item.keyForm !== keyForm) { 
+        return item;
+      } else { 
+        // else we did find the same entry (matching keys) in the array, so lets return the updated educationForm array, along with the updated object entry. 
+        return {educationForm, schoolNameInput: schoolNameInput, degreeInput: degreeInput, startDateInput: startDateInput, endDateInput: endDateInput, locationInput: locationInput}
+      }
+    })) 
+    
+    // once the edit btn is clicked, these will re-populate the input fields, with the entry content that was clicked on. 
+    setSchoolNameInput(item.schoolNameInput);
+    setDegreeInput(item.degreeInput);
+    setStartDateInput(item.startDateInput);
+    setEndDateInput(item.endDateInput);
+    setLocationInput(item.locationInput); 
+    setKeyForm(item.keyForm);
+    
   } 
 
   // 

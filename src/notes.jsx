@@ -525,5 +525,10 @@
 
 // how to figure out which event btn was clicked on, 
 
-// we need to fucking determine what edit btn was clicked, WE NEED TO ACCESS THE EVENT NAME!!!!!!!!!!!!!!!!!
-// WHY DOES IT KEEP FUCKING RETURNING UNDEFINED???????????????????????????
+
+// evening session, 
+// *** 
+// review cakes messages, try to see what you can figure out and learn 
+// review that one example from the docs, 
+// start with that, 
+// if still confused, form a question and post it 
