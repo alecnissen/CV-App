@@ -24,12 +24,10 @@ export default function App() {
       inputPhone: inputPhone,
       keyForm: crypto.randomUUID(),
       keyCV: crypto.randomUUID(),
-    };
-    // setPersonalDetailsForm(updatedInfo); 
+    }; 
+    
+    setPersonalDetailsForm([...personalDetailsForm, updatedInfo]);
 
-     setPersonalDetailsForm([...personalDetailsForm, updatedInfo]);
-
-    // setPersonalDetailsFormArray(updatedInfo);
   } 
 
   function handleSubmitEducation(e, schoolNameInput, degreeInput, startDateInput, endDateInput, locationInput) { 
@@ -45,11 +43,6 @@ export default function App() {
     }; 
     setEducationForm([...educationForm, updatedInfo])
   } 
-
-  // function clearEducationForm(e) { 
-  //   e.reset();
-  // }
-
 
   function handleSubmitExperience(
     e, 
@@ -82,13 +75,11 @@ export default function App() {
           handleSubmit={handleSubmitPersonal}
           personalDetailsForm={personalDetailsForm}
           setPersonalDetailsForm={setPersonalDetailsForm}
-          // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetails>
         <Education
           handleSubmit={handleSubmitEducation}
           educationForm={educationForm}
           setEducationForm={setEducationForm}
-          // clearEducationForm={clearEducationForm}
         ></Education>
         <ProfessionalExperience
           handleSubmit={handleSubmitExperience}
@@ -100,7 +91,6 @@ export default function App() {
       <div id="cv-page">
         <PersonalDetailsCVComponent
           personalDetailsForm={personalDetailsForm}
-          // personalDetailsFormArray={personalDetailsFormArray}
         ></PersonalDetailsCVComponent>
         <h3 className="education-section-main-header">Education</h3>
         <EducationCVComponent

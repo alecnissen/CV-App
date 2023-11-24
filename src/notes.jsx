@@ -532,3 +532,10 @@
 // review that one example from the docs, 
 // start with that, 
 // if still confused, form a question and post it 
+
+// try the save btn approach, 
+// edit btn will re-populate the fields, 
+// when save is pressed it saves the updated value into state, 
+
+// take a step back and understand what is going on within the app, 
+// walk through the entire process, 

@@ -4,17 +4,7 @@ import EducationCVComponent from './EducationCVComponent';
 
 import App from './App';
 
-
-
-
 export default function Education({ handleSubmit, educationForm, setEducationForm }) {
-  // let clickedOnEntry
-
-  // console.log(clickedOnEntry);
-
-  // function computedProperty(obj) {
-
-  // }
 
   const [schoolNameInput, setSchoolNameInput] = useState('');
   const [degreeInput, setDegreeInput] = useState('');
@@ -25,10 +15,6 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
 
   const [showedEducation, setShowedEducation] = useState(false);
 
-  let isEditing = educationForm.some(item => item.keyForm === keyForm);
-
-  console.log('checking status of isEditing variable', isEditing);
-
   function clearEducationInputs() {
     setSchoolNameInput('');
     setDegreeInput('');
@@ -38,91 +24,73 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
     setShowedEducation('');
   }
 
-  // old handle edit function
-  // function handleEdit(e) {
-
-  //     let selectedEntry = e.target.name;
-  //     console.log(selectedEntry);
-
-  //      for (let i = 0; i < educationForm.length; i++) {
-  //       console.log(educationForm);
-  //       let item = educationForm[i];
-  //       if (item.keyForm === selectedEntry) {
-  //         // educationForm.splice(item, 1);
-  //         setSchoolNameInput(item.schoolNameInput);
-  //         setDegreeInput(item.degreeInput);
-  //         setStartDateInput(item.startDateInput);
-  //         setEndDateInput(item.endDateInput);
-  //         setLocationInput(item.locationInput);
-  //       }
-  //       setEducationForm([...educationForm]);
-  //      }
-  // }
-
-  // *** 
-  // copy of the eductionForm array, 
-  // replace the object with the updated object, then just return it?
-
+  // this will re-populate the input fields, once clicked so user can see what content was inside that entry 
   function handleEdit(item) {
-    // setting the educationForm state with the result of using map on the education array.
 
-    setEducationForm(
-      educationForm.map(item => {
-        // if the item in education state, does not match an item submitted into state, return the item
-        // checking if the state already contains that submitted entry,
+      setSchoolNameInput(item.schoolNameInput);
+      setDegreeInput(item.degreeInput);
+      setStartDateInput(item.startDateInput);
+      setEndDateInput(item.endDateInput);
+      setLocationInput(item.locationInput);
+      setKeyForm(item.keyForm);
 
-        let educationFormCopy = [...educationForm];
+  } 
 
-        console.log(educationFormCopy); 
+  // this function, will update/modify the state, 
 
-        console.log(item); 
-    
-        if (item.keyForm !== keyForm) {
-          return item;
-        } else {
-          // else we did find the same entry (matching keys) in the array, so lets return the updated educationForm array, along with the updated object entry.
-          return {
-            educationFormCopy,
-            schoolNameInput: schoolNameInput,
-            degreeInput: degreeInput,
-            startDateInput: startDateInput,
-            endDateInput: endDateInput,
-            locationInput: locationInput,
-          };
-        }
-      }),
-    ); 
+  function handleSave(item) {
+    let educationFormCopy = [...educationForm];
 
-    console.log({
-      schoolNameInput: schoolNameInput,
-      degreeInput: degreeInput,
-      startDateInput: startDateInput,
-      endDateInput: endDateInput,
-      locationInput: locationInput,
+    console.log(item);
+
+    setSchoolNameInput(input => {
+      input = schoolNameInput;
+      return input;
     });
 
-    // once the edit btn is clicked, these will re-populate the input fields, with the entry content that was clicked on.
-    setSchoolNameInput(item.schoolNameInput);
-    setDegreeInput(item.degreeInput);
-    setStartDateInput(item.startDateInput);
-    setEndDateInput(item.endDateInput);
-    setLocationInput(item.locationInput);
-    setKeyForm(item.keyForm);
-  }
+    setDegreeInput(input => {
+      input = degreeInput;
+      return input;
+    });
 
-  //
-  // function handleEdit(e) {
-  //    let selectedEntry = e.target.name;
+    setStartDateInput(input => {
+      input = startDateInput;
+      return input;
+    });
 
-  //   educationForm.filter(item => {
-  //      item !== selectedEntry
-  //    })
-  // }
+    setEndDateInput(input => {
+      input = endDateInput;
+      return input;
+    });
+
+    setLocationInput(input => {
+      input = locationInput;
+      return input;
+    });
+
+      console.log(schoolNameInput);
+      console.log(degreeInput);
+      console.log(startDateInput);
+      console.log(endDateInput);
+      console.log(locationInput);
+
+         const updatedObj = {
+          schoolNameInput: schoolNameInput,
+          degreeInput: degreeInput,
+          startDateInput: startDateInput,
+          endDateInput: endDateInput,
+          locationInput: locationInput,
+         }
+
+         console.log('UPDATED OBJECT AFTER PRESSING SAVE', updatedObj);
+         console.log('COPY OF THE UPDATED ARRAY, WITHIN HANDLESAVE', educationFormCopy);
+
+         setEducationForm([...educationFormCopy, updatedObj]);
+
+  } 
+
 
   function handleDelete(e) {
-    // clickedOnEntry = e.target.name;
-    // console.log(clickedOnEntry)
-    // setEducationForm(educationForm.filter(item => item.keyForm !== clickedOnEntry))
     let clickedOnEntry = e.target.name;
 
     setEducationForm(
@@ -145,7 +113,6 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
         <form
           className="hide-show-content-education-details"
           style={showedEducation ? { display: 'none' } : { display: 'flex' }}
-          // onSubmit={e => clearEducationForm(e)}
         >
           <label>School Name:</label>
           <input
@@ -204,6 +171,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
           <h3>{educationForm.endDateInput}</h3>
           <h3>{educationForm.locationInput}</h3> */}
           {educationForm.map(item => {
+            console.log('COPY OF THE UPDATED ARRAY, WITHIN RETURN', educationForm);
             return (
               <div key={item.keyForm} className="education-content-below-form">
                 <h3>{item.schoolNameInput}</h3>
@@ -211,6 +179,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                 <h3>{item.startDateInput}</h3>
                 <h3>{item.endDateInput}</h3>
                 <h3>{item.locationInput}</h3>
+
 
                 <div className="education-btns-container-below-form">
                   <button
@@ -223,15 +192,20 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                   </button>
                   <button
                     onClick={e => {
-                      // handleDelete(e);
-                      // clickedOnEntry = e.target.name;
-                      // console.log(clickedOnEntry)
-                      // setEducationForm(educationForm.filter(item => item.keyForm !== clickedOnEntry))
                       handleDelete(e);
                     }}
                     name={item.keyForm}
                   >
                     Delete
+                  </button>
+
+                  <button
+                    onClick={e => {
+                      handleSave(item);
+                    }}
+                    name={item.keyForm}
+                  >
+                    Save
                   </button>
                 </div>
               </div>
