@@ -26,6 +26,13 @@ export default function PersonalDetails({
     let clickedOnEntry = e.target.name;
 
     setPersonalDetailsForm(personalDetailsForm.filter(item => item.keyForm !== clickedOnEntry));
+  } 
+
+  function handleEdit(item) { 
+    setInputName(item.inputName);
+    setInputEmail(item.inputEmail);
+    setInputAddress(item.inputAddress);
+    setInputPhone(item.inputPhone)
   }
 
   return (
@@ -101,7 +108,15 @@ export default function PersonalDetails({
                 <h3>{item.inputPhone}</h3>
 
                 <div className="personal-details-btns-container-below-form">
-                  <button>Edit</button>
+                  <button
+                    onClick={e => {
+                      handleEdit(item);
+                      handleDelete(e);
+                    }}
+                    name={item.keyForm}
+                  > 
+                    Edit
+                  </button>
 
                   <button
                     onClick={e => {

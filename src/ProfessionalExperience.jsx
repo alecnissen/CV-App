@@ -25,6 +25,14 @@ export default function ProfessionalExperience({
     let clickedOnEntry = e.target.name;
 
     setExperienceForm(experienceForm.filter(item => item.keyForm !== clickedOnEntry));
+  } 
+
+  function handleEdit(item) { 
+    setInputJobTitle(item.inputJobTitle);
+    setInputCompany(item.inputCompany);
+    setInputDescription(item.inputDescription);
+    setInputStartDate(item.inputStartDate);
+    setInputEndDate(item.inputEndDate);
   }
 
   return (
@@ -101,7 +109,15 @@ export default function ProfessionalExperience({
                 <h3>{item.inputStartDate}</h3>
                 <h3>{item.inputEndDate}</h3>
                 <h3>{item.inputDescription}</h3>
-                <button name={item.keyForm}>Edit</button>
+                <button
+                  onClick={e => {
+                    handleEdit(item);
+                    handleDelete(e);
+                  }}
+                  name={item.keyForm}
+                >
+                  Edit
+                </button>
                 <button
                   onClick={e => {
                     handleDelete(e);

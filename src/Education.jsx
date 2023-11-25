@@ -38,63 +38,63 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
 
   // this function, will update/modify the state, 
 
-  function handleSave(item) {
-    // let educationFormCopy = [...educationForm];
+  // function handleSave(item) {
+  //   // let educationFormCopy = [...educationForm];
 
-    console.log(item); 
+  //   console.log(item); 
 
-    //  setSchoolNameInput('');
-    //  setDegreeInput('');
-    //  setStartDateInput('');
-    //  setEndDateInput('');
-    //  setLocationInput('');
-    //  setShowedEducation(''); 
+  //   //  setSchoolNameInput('');
+  //   //  setDegreeInput('');
+  //   //  setStartDateInput('');
+  //   //  setEndDateInput('');
+  //   //  setLocationInput('');
+  //   //  setShowedEducation(''); 
 
-    setSchoolNameInput(input => {
-      input = schoolNameInput;
-      return input;
-    });
+  //   // setSchoolNameInput(input => {
+  //   //   input = schoolNameInput;
+  //   //   return input;
+  //   // });
 
-    setDegreeInput(input => {
-      input = degreeInput;
-      return input;
-    });
+  //   // setDegreeInput(input => {
+  //   //   input = degreeInput;
+  //   //   return input;
+  //   // });
 
-    setStartDateInput(input => {
-      input = startDateInput;
-      return input;
-    });
+  //   // setStartDateInput(input => {
+  //   //   input = startDateInput;
+  //   //   return input;
+  //   // });
 
-    setEndDateInput(input => {
-      input = endDateInput;
-      return input;
-    });
+  //   // setEndDateInput(input => {
+  //   //   input = endDateInput;
+  //   //   return input;
+  //   // });
 
-    setLocationInput(input => {
-      input = locationInput;
-      return input;
-    });
+  //   // setLocationInput(input => {
+  //   //   input = locationInput;
+  //   //   return input;
+  //   // });
 
-      console.log(schoolNameInput);
-      console.log(degreeInput);
-      console.log(startDateInput);
-      console.log(endDateInput);
-      console.log(locationInput);
+  //     // console.log(schoolNameInput);
+  //     // console.log(degreeInput);
+  //     // console.log(startDateInput);
+  //     // console.log(endDateInput);
+  //     // console.log(locationInput);
 
-         const updatedObj = {
-          schoolNameInput: schoolNameInput,
-          degreeInput: degreeInput,
-          startDateInput: startDateInput,
-          endDateInput: endDateInput,
-          locationInput: locationInput,
-         }
+  //        const updatedObj = {
+  //         schoolNameInput: schoolNameInput,
+  //         degreeInput: degreeInput,
+  //         startDateInput: startDateInput,
+  //         endDateInput: endDateInput,
+  //         locationInput: locationInput,
+  //        }
 
-         console.log('UPDATED OBJECT AFTER PRESSING SAVE', updatedObj);
-        //  console.log('COPY OF THE UPDATED ARRAY, WITHIN HANDLESAVE', educationFormCopy);
+  //        console.log('UPDATED OBJECT AFTER PRESSING SAVE', updatedObj);
+  //       //  console.log('COPY OF THE UPDATED ARRAY, WITHIN HANDLESAVE', educationFormCopy);
 
-         setEducationForm([updatedObj]);
+  //        setEducationForm([updatedObj]);
 
-  } 
+  // } 
 
 
   function handleDelete(e) {
@@ -192,8 +192,9 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                   <button
                     onClick={e => {
                       handleEdit(item);
+                      handleDelete(e);
                     }}
-                    name={item.keyForm}
+                    name={item.keyForm} 
                   >
                     Edit
                   </button>
