@@ -39,9 +39,16 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
   // this function, will update/modify the state, 
 
   function handleSave(item) {
-    let educationFormCopy = [...educationForm];
+    // let educationFormCopy = [...educationForm];
 
-    console.log(item);
+    console.log(item); 
+
+    //  setSchoolNameInput('');
+    //  setDegreeInput('');
+    //  setStartDateInput('');
+    //  setEndDateInput('');
+    //  setLocationInput('');
+    //  setShowedEducation(''); 
 
     setSchoolNameInput(input => {
       input = schoolNameInput;
@@ -83,9 +90,9 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
          }
 
          console.log('UPDATED OBJECT AFTER PRESSING SAVE', updatedObj);
-         console.log('COPY OF THE UPDATED ARRAY, WITHIN HANDLESAVE', educationFormCopy);
+        //  console.log('COPY OF THE UPDATED ARRAY, WITHIN HANDLESAVE', educationFormCopy);
 
-         setEducationForm([...educationFormCopy, updatedObj]);
+         setEducationForm([updatedObj]);
 
   } 
 

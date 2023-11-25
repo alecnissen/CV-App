@@ -538,4 +538,18 @@
 // when save is pressed it saves the updated value into state, 
 
 // take a step back and understand what is going on within the app, 
-// walk through the entire process, 
+// walk through the entire process,  
+
+
+
+// Background/Desired Behavior: User will fill out the education form, and click submit so an entry is created. User can then click the edit btn to begin the editing process, they will make their changes and once save btn is pressed the content will be updated on the same entry. 
+
+// The Problem: When save btn is pressed, it still creates a new entry instead of modifying the selected entry. :confused: 
+
+// What I've tried: Been following an example on the react docs about updating objects in an array, I was told I was on the right track with this approach but I am still so lost on why my current code is not working. I've reviewed the code several times and compared my example to the docs example and it appears I am doing the same process. Setting the state to a copy of the updated array, along with the updated object as well. 
+
+// Here is my current code block, I am also attaching repo as well as I think that would be the easiest way to receive help on this, I will have to make this two posts, so I can post the code block and repo. 
+
+
+
+// 
