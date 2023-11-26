@@ -33,6 +33,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
       setEndDateInput(item.endDateInput);
       setLocationInput(item.locationInput);
       setKeyForm(item.keyForm);
+      setShowedEducation(showedEducation);
 
   } 
 
@@ -191,6 +192,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                 <div className="education-btns-container-below-form">
                   <button
                     onClick={e => {
+                      setShowedEducation(!showedEducation);
                       handleEdit(item);
                       handleDelete(e);
                     }}

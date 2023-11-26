@@ -58,12 +58,18 @@ body {
     font-size: 2.5rem;
 } 
 
-.personal-details-form-content { 
+.personal-details-form-content,
+.education-content-below-form,
+.experience-content-below-form { 
     display: flex;
-    /* flex-direction: column; */
-    gap: 1em;
+    flex-direction: column;
+    /* gap: 1em; */
     font-size: 0.8rem;
-    border: 2px solid black;
+    border: 2px solid darkblue;
+    border-radius: 10%;
+    padding: 10px;
+    /* justify-content: center; */
+    text-align: center;
 }
 
 .email-address-container-personal-details { 
@@ -97,31 +103,70 @@ body {
     font-size: 1.4rem;
 } 
 
-.personal-details-container input { 
+.personal-details-container input, 
+.education-input-container input,
+.professional-experience-form-container input { 
     /* width: min(15em); */
-    width: 15em;
-    /* font-size: 1rem; */
+    width: 18em;
+    font-size: 1.3rem;
 } 
 
-.personal-details-btn-container button { 
-    font-size: 1.2rem;
-    margin: 2em;
+.personal-details-btn-container, 
+.education-btns-container,
+.professional-experience-btn-containers { 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.personal-details-btn-container button,
+.education-btns-container button,
+.professional-experience-btn-containers button  {  
+    padding: 10px;
+    font-size: 1.4rem;
+    /* margin: 2em; */
     border-radius: 10%;
 } 
 
+.personal-details-btn-container button:hover,
+.professional-experience-btn-containers button:hover,
+.education-btns-container button:hover { 
+    background-color: darkblue;
+    color: white;
+}
+
 .personal-details-btns-container-below-form { 
     display: flex;
+    justify-content: center;
     /* flex-direction: column; */
 } 
 
-.personal-details-btns-container-below-form button { 
+.personal-details-btns-container-below-form button,
+.education-btns-container-below-form button,
+.experience-content-below-form-btn-container button
+{ 
     font-size: 1rem;
+    border-radius: 10%;
+    padding: 3px;
 }   
 
+.personal-details-btns-container-below-form button:hover,
+.education-btns-container-below-form button:hover, 
+.experience-content-below-form-btn-container button:hover { 
+    background-color: darkblue;
+    color: white;
+}
 
 
-.dropdown-icon-personal-details img { 
+
+.dropdown-icon-personal-details img, 
+.dropdown-icon-education img,
+.dropdown-icon-experience-details img { 
     width: 30px;
+    position: relative;
+    top: -1em;
+    background-color: white;
+    border-radius: 15%;
 } 
 
 .education-section-main-header,
@@ -158,20 +203,21 @@ body {
 .education-form-content { 
     display: flex;
     flex-direction: column;
+    gap: 0.5em;
 } 
 
-.education-content-below-form { 
+/* .education-content-below-form { 
     display: flex;
     /* gap: 1em; */
-    border: 2px solid black;
+    /* border: 2px solid black;
     font-size: 0.8rem;
-} 
+}  */ 
 
-.education-content-below-form button { 
+/* .education-content-below-form button { 
     font-size: 1.2rem;
     /* background-color: gray; */
     /* width: 20%; */
-}
+/* } */ 
 
 
 .education-input-container > h3 { 
@@ -200,11 +246,11 @@ body {
 } 
 
 
-.education-btns-container button { 
+/* .education-btns-container button { 
     font-size: 1.2rem;
     margin: 2em;
     border-radius: 10%;
-} 
+}  */
 
 .experience-content-container { 
     display: flex;
@@ -253,11 +299,11 @@ body {
     /* font-size: 1rem; */
 } 
 
-.professional-experience-btn-containers button { 
+/* .professional-experience-btn-containers button { 
     font-size: 1.2rem;
     margin: 2em;
     border-radius: 10%;
-}
+} */
 
 .personal-details-CV-component-container { 
     /* grid-column-start: 2; */
@@ -278,24 +324,24 @@ body {
 
 
 
-.experience-form-content { 
+/* .experience-form-content { 
     display: flex;
     flex-direction: column;
-} 
+}  */
 
-.experience-content-below-form { 
+/* .experience-content-below-form { 
     display: flex;
     flex-direction: row;
     gap: 1em;
     border: 2px solid black;
     font-size: 0.8rem;
-}
+} */
 
-.experience-content-below-form button { 
+/* .experience-content-below-form button { 
     font-size: 1.2rem;
     /* background-color: gray; */
     /* width: 15%; */
-}
+/* } */ 
 
 .professional-experience-description-content { 
     display: block;

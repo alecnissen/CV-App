@@ -32,7 +32,8 @@ export default function PersonalDetails({
     setInputName(item.inputName);
     setInputEmail(item.inputEmail);
     setInputAddress(item.inputAddress);
-    setInputPhone(item.inputPhone)
+    setInputPhone(item.inputPhone);
+    setShowed(showed);
   }
 
   return (
@@ -94,7 +95,7 @@ export default function PersonalDetails({
           </div>
         </form>
 
-        <div className="personal-details-form-content">
+        <div>
           {/* <h3>{personalDetailsForm.inputName}</h3>
           <h3>{personalDetailsForm.inputEmail}</h3>
           <h3>{personalDetailsForm.inputAddress}</h3>
@@ -110,6 +111,7 @@ export default function PersonalDetails({
                 <div className="personal-details-btns-container-below-form">
                   <button
                     onClick={e => {
+                      setShowed(!showed);
                       handleEdit(item);
                       handleDelete(e);
                     }}

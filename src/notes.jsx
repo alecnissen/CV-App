@@ -552,4 +552,21 @@
 
 
 
-// 
+// *** 11/25 
+
+// Form Input Sections:
+// 1. Make the inputs longer so all information can be seen when typing (Large enough to match the Description in Professional Experience input length)  
+
+// A slightly larger font for readability on the inputs
+
+
+// Little less space between the header and the drop down arrow.
+
+
+// Make the drop down arrow white so it's more visible and matches the other text.
+
+
+// Style the submit button with a hover and make it a little larger, maybe some padding.
+// **** 
+
+// look at the working tree and apply the same changes to the education section 

@@ -33,6 +33,7 @@ export default function ProfessionalExperience({
     setInputDescription(item.inputDescription);
     setInputStartDate(item.inputStartDate);
     setInputEndDate(item.inputEndDate);
+    setShowedExperience(showedExperience);
   }
 
   return (
@@ -109,8 +110,10 @@ export default function ProfessionalExperience({
                 <h3>{item.inputStartDate}</h3>
                 <h3>{item.inputEndDate}</h3>
                 <h3>{item.inputDescription}</h3>
+                <div className='experience-content-below-form-btn-container'> 
                 <button
                   onClick={e => {
+                    setShowedExperience(!showedExperience);
                     handleEdit(item);
                     handleDelete(e);
                   }}
@@ -126,6 +129,8 @@ export default function ProfessionalExperience({
                 >
                   Delete
                 </button>
+                </div>
+
               </div>
             );
           })}
