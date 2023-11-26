@@ -6,18 +6,17 @@ export default function ProfessionalExperienceCVComponent({ experienceForm }) {
         {experienceForm.map(item => {
           return (
             <>
-              <div
-                className="experience-content-container"
-                key={item.keyCV}
-              >
+              <div className="experience-content-container" key={item.keyCV}>
                 <h3>{item.inputJobTitle}</h3>
                 <h3>{item.inputCompany}</h3>
-                <h3>{item.inputStartDate}</h3>
-                <h3>{item.inputEndDate}</h3>
+                <h3>
+                  {item.inputStartDate} - {item.inputEndDate}
+                </h3>
+                {/* <h3>{item.inputEndDate}</h3> */}
               </div>
 
-              <div>
-                <h3>{item.inputDescription}</h3>
+              <div className="experience-content-container-description">
+                <p>{item.inputDescription}</p>
               </div>
             </>
           );

@@ -183,11 +183,12 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
             return (
               <div key={item.keyForm} className="education-content-below-form">
                 <h3>{item.schoolNameInput}</h3>
-                <h3>{item.degreeInput}</h3>
-                <h3>{item.startDateInput}</h3>
-                <h3>{item.endDateInput}</h3>
                 <h3>{item.locationInput}</h3>
-
+                <h3>
+                  {item.startDateInput} - {item.endDateInput}
+                </h3>
+                {/* <h3>{item.endDateInput}</h3> */}
+                <h3>{item.degreeInput}</h3>
 
                 <div className="education-btns-container-below-form">
                   <button
@@ -196,7 +197,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                       handleEdit(item);
                       handleDelete(e);
                     }}
-                    name={item.keyForm} 
+                    name={item.keyForm}
                   >
                     Edit
                   </button>
@@ -207,15 +208,6 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                     name={item.keyForm}
                   >
                     Delete
-                  </button>
-
-                  <button
-                    onClick={e => {
-                      handleSave(item);
-                    }}
-                    name={item.keyForm}
-                  >
-                    Save
                   </button>
                 </div>
               </div>

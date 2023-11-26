@@ -570,3 +570,35 @@
 // **** 
 
 // look at the working tree and apply the same changes to the education section 
+
+// *** 
+
+// I would change the CV page section back to being the default column instead of a row and move the location. I would also rearrange it to have the location and degree moved. I would probably not have any of this bold, or only have the most important thing bold. (These suggestions also apply to the professional experience section too)
+
+// Formatted like this:
+// Software Development Training School, (Location Here)
+// (OR Location Here)
+// 09/11/2023-10/11/2023 (Or however your country likes doing dates) (I use moment for date formatting a lot, it's pretty simple)
+// Google Certificates/Degree Here 
+
+
+
+// *** tomorrow agenda, 11/26
+
+// word wrapping of inputs and cv too? 
+
+// increasing size of cv to make sure all content fits, 
+// fonts 
+// reducing space between inputs and cv page. 
+
+// review the commits, and commit and push changes, then begin word wrapping, 
+// ask for clarififcation if stuck, 
+
+// *** inc size of cv, inc font size in header, and centered it with position 
+// changed education and experience section in cv to column instead of row, 
+
+// changed start date/end data to one row for education and experience, 
+// changed description content to p tag instead of h3, so it is smaller, 
+
+
+// 

@@ -107,30 +107,31 @@ export default function ProfessionalExperience({
               <div key={item.keyForm} className="experience-content-below-form">
                 <h3>{item.inputJobTitle}</h3>
                 <h3>{item.inputCompany}</h3>
-                <h3>{item.inputStartDate}</h3>
-                <h3>{item.inputEndDate}</h3>
+                <h3>
+                  {item.inputStartDate} - {item.inputEndDate}
+                </h3>
+                {/* <h3>{item.inputEndDate}</h3> */}
                 <h3>{item.inputDescription}</h3>
-                <div className='experience-content-below-form-btn-container'> 
-                <button
-                  onClick={e => {
-                    setShowedExperience(!showedExperience);
-                    handleEdit(item);
-                    handleDelete(e);
-                  }}
-                  name={item.keyForm}
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={e => {
-                    handleDelete(e);
-                  }}
-                  name={item.keyForm}
-                >
-                  Delete
-                </button>
+                <div className="experience-content-below-form-btn-container">
+                  <button
+                    onClick={e => {
+                      setShowedExperience(!showedExperience);
+                      handleEdit(item);
+                      handleDelete(e);
+                    }}
+                    name={item.keyForm}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={e => {
+                      handleDelete(e);
+                    }}
+                    name={item.keyForm}
+                  >
+                    Delete
+                  </button>
                 </div>
-
               </div>
             );
           })}
