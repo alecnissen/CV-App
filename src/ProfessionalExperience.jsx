@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ProfessionalExperienceCVComponent from './ProfessionalExperienceCVComponent';
+import dropdownImg from '../Icons/down-arrow.png';
 
 export default function ProfessionalExperience({
   handleSubmit,
@@ -42,7 +43,7 @@ export default function ProfessionalExperience({
         <h3>Professional Experience:</h3>
         <div className="dropdown-icon-experience-details">
           <img
-            src="Icons/down-arrow.png"
+            src={dropdownImg}
             onClick={() => setShowedExperience(!showedExperience)}
           ></img>
         </div>

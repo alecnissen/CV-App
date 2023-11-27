@@ -1,6 +1,7 @@
 import React, { useState } from 'react' 
 import EducationCVComponent from './EducationCVComponent';
 import App from './App';
+import dropdownImg from '../Icons/down-arrow.png';
 
 export default function Education({ handleSubmit, educationForm, setEducationForm }) {
 
@@ -49,7 +50,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
 
         <div className="dropdown-icon-education">
           <img
-            src="Icons/down-arrow.png"
+            src={dropdownImg}
             onClick={() => setShowedEducation(!showedEducation)}
           ></img>
         </div>

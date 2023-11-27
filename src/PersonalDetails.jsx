@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import PersonalDetailsCVComponent from './PersonalDetailsCVComponent';
 import App from './App';
+import dropdownImg from '../Icons/down-arrow.png';
+
 
 
 export default function PersonalDetails({
@@ -41,10 +43,7 @@ export default function PersonalDetails({
       <div className="personal-details-container">
         <h3>Personal Details:</h3>
         <div className="dropdown-icon-personal-details">
-          <img
-            src="Icons/down-arrow.png"
-            onClick={() => setShowed(!showed)}
-          ></img>
+          <img src={dropdownImg} onClick={() => setShowed(!showed)}></img>
         </div>
 
         <form
@@ -111,7 +110,7 @@ export default function PersonalDetails({
                       handleDelete(e);
                     }}
                     name={item.keyForm}
-                  > 
+                  >
                     Edit
                   </button>
 
