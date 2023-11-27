@@ -617,3 +617,7 @@
 
 // time for fonts 
 // data formatting 
+
+// remove all commented out code, 
+// look over everything, 
+// begin deployment process
