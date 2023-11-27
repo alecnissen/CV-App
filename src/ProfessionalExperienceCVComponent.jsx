@@ -17,7 +17,10 @@ export default function ProfessionalExperienceCVComponent({ experienceForm }) {
 
               <div className="experience-content-container-description">
                 <p>{item.inputDescription}</p>
-              </div>
+              </div> 
+
+            <div className='experience-content-bottom-border'></div>
+
             </>
           );
         })}

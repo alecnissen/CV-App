@@ -1,13 +1,22 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@200&family=Playfair+Display+SC:ital@1&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@200;500&family=Playfair+Display+SC:ital@1&display=swap');
+
+* { 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
 
  #root { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }   
 
+
+
 .main-header-container { 
     /* text-align: center; */
     position: relative;
-    left: 72%;
+    left: 80%;
     font-size: 1.5rem;
     text-decoration: underline;
     color: white;
@@ -25,10 +34,11 @@ body {
 
 #cv-page { 
     background-color: white;
-    width: 800px;
-    height: 1000px;
+    width: 950px;
+    height: 1400px;
     border: 5px solid black;
     font-family: sans-serif;
+    margin-right: 10em;
 }
 
 .personal-details-container { 
@@ -43,8 +53,9 @@ body {
     align-items: center;
     border-radius: 5%;
     border: 5px solid black;
-    width: 50%;
+    width: 60%;
     color: white;
+    margin-left: 3em;
     /* gap: 1.5em; */
 } 
 
@@ -75,11 +86,12 @@ body {
     /* inline-size: min-content; */
     word-break: break-all;
     font-size: 0.8rem;
-    border: 2px solid darkblue;
+    border: 5px solid darkblue;
     border-radius: 10%;
     padding: 10px;
     /* justify-content: center; */
     text-align: center;
+    line-height: 1;
 }
 
 .email-address-container-personal-details { 
@@ -189,6 +201,7 @@ body {
     flex-direction: column;
     font-size: 0.8rem;
     word-break: break-all;
+    line-height: 1;
     /* gap: 2em; */
 } 
 
@@ -204,9 +217,17 @@ body {
     align-items: center;
     border-radius: 5%;
     border: 5px solid black;
-    width: 50%;
+    width: 60%;
     color: white;
+    margin-left: 3em;
 } 
+
+.education-content-cv-bottom-border,
+.experience-content-bottom-border { 
+    /* border-bottom: 2px solid black;
+    opacity: 0.1; */
+    padding: 10px;
+}
 
 .hide-show-content-education-details { 
     display: flex;
@@ -292,8 +313,9 @@ body {
     align-items: center;
     border-radius: 5%;
     border: 5px solid black;
-    width: 50%;
+    width: 60%;
     color: white;
+    margin-left: 3em;
     /* gap: 0.5em; */
 } 
 
@@ -340,10 +362,9 @@ body {
     text-align: center;
 } 
 
-/* .professional-experience-cv-component-container { 
-    text-align: center;
-    display: flex;
-} */
+.professional-experience-cv-component-container { 
+    line-height: 1;
+}
 
 
 

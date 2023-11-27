@@ -611,3 +611,9 @@
 
 // Reduce line height/spacing in cv form,
 // maybe put a line between form inputs to seperate them further, making it easier to read, 
+
+// stick with the padding for the div at the bottom of education and experience, 
+// now fix the line height for the content below all forms, 
+
+// time for fonts 
+// data formatting 
