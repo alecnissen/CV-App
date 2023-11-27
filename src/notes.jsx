@@ -587,6 +587,11 @@
 
 // word wrapping of inputs and cv too? 
 
+// *** 
+// You may want to consider adding a word wrap/break to your inputs. Totally optional!
+
+
+
 // increasing size of cv to make sure all content fits, 
 // fonts 
 // reducing space between inputs and cv page. 
@@ -601,4 +606,8 @@
 // changed description content to p tag instead of h3, so it is smaller, 
 
 
-// 
+// gap between entries in education, also check personal details section too 
+
+
+// Reduce line height/spacing in cv form,
+// maybe put a line between form inputs to seperate them further, making it easier to read, 

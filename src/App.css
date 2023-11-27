@@ -45,10 +45,17 @@ body {
     border: 5px solid black;
     width: 50%;
     color: white;
+    /* gap: 1.5em; */
 } 
+
+/* .personal-details-form-container { 
+    gap: 0.5em;
+} */
 
 .personal-details-CV-component-container { 
     padding: 10px;
+    text-align: center;
+    word-break: break-all;
     /* background-color: blue; */
 }
 
@@ -64,6 +71,9 @@ body {
     display: flex;
     flex-direction: column;
     /* gap: 1em; */
+    /* flex-wrap: wrap; */
+    /* inline-size: min-content; */
+    word-break: break-all;
     font-size: 0.8rem;
     border: 2px solid darkblue;
     border-radius: 10%;
@@ -178,6 +188,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 0.8rem;
+    word-break: break-all;
     /* gap: 2em; */
 } 
 
@@ -260,11 +271,13 @@ body {
     flex-direction: column;
     text-align: center;
     font-size: 0.8rem;
+    flex-wrap: wrap;
     /* gap: 2em; */
 } 
 
 .experience-content-container-description { 
     text-align: center;
+    word-break: break-all;
 }
 
 .professional-experience-form-container { 
@@ -281,6 +294,7 @@ body {
     border: 5px solid black;
     width: 50%;
     color: white;
+    /* gap: 0.5em; */
 } 
 
 .hide-show-content-experience { 
@@ -314,17 +328,17 @@ body {
     border-radius: 10%;
 } */
 
-.personal-details-CV-component-container { 
+/* .personal-details-CV-component-container { 
     /* grid-column-start: 2; */
     /* text-align: center; */
-    text-align: center;
+    /* text-align: center; */
     /* display: flex;
-    justify-content: center; */
-} 
+    justify-content: center; */ 
+/* }  */ 
 
 .education-cv-component-container { 
     text-align: center;
-}
+} 
 
 /* .professional-experience-cv-component-container { 
     text-align: center;
@@ -333,10 +347,11 @@ body {
 
 
 
-/* .experience-form-content { 
+.experience-form-content { 
     display: flex;
     flex-direction: column;
-}  */
+    gap: 0.5em;
+} 
 
 /* .experience-content-below-form { 
     display: flex;
