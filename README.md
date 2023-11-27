@@ -1,3 +1,6 @@
+This project is a simple CV/Resume builder. It allowed me to practice basic React concepts such as state, using props and components. I also implemented additional features such as dropdown menu's for each form section, ability to edit and delete entries, and allowing the user to add as many entries as they like for the education and experience sections.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
