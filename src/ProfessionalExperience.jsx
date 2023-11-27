@@ -110,7 +110,6 @@ export default function ProfessionalExperience({
                 <h3>
                   {item.inputStartDate} - {item.inputEndDate}
                 </h3>
-                {/* <h3>{item.inputEndDate}</h3> */}
                 <h3>{item.inputDescription}</h3>
                 <div className="experience-content-below-form-btn-container">
                   <button

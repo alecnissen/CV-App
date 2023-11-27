@@ -1,7 +1,5 @@
 import React, { useState } from 'react' 
-
 import EducationCVComponent from './EducationCVComponent';
-
 import App from './App';
 
 export default function Education({ handleSubmit, educationForm, setEducationForm }) {
@@ -24,7 +22,6 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
     setShowedEducation('');
   }
 
-  // this will re-populate the input fields, once clicked so user can see what content was inside that entry 
   function handleEdit(item) {
 
       setSchoolNameInput(item.schoolNameInput);
@@ -36,67 +33,6 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
       setShowedEducation(showedEducation);
 
   } 
-
-  // this function, will update/modify the state, 
-
-  // function handleSave(item) {
-  //   // let educationFormCopy = [...educationForm];
-
-  //   console.log(item); 
-
-  //   //  setSchoolNameInput('');
-  //   //  setDegreeInput('');
-  //   //  setStartDateInput('');
-  //   //  setEndDateInput('');
-  //   //  setLocationInput('');
-  //   //  setShowedEducation(''); 
-
-  //   // setSchoolNameInput(input => {
-  //   //   input = schoolNameInput;
-  //   //   return input;
-  //   // });
-
-  //   // setDegreeInput(input => {
-  //   //   input = degreeInput;
-  //   //   return input;
-  //   // });
-
-  //   // setStartDateInput(input => {
-  //   //   input = startDateInput;
-  //   //   return input;
-  //   // });
-
-  //   // setEndDateInput(input => {
-  //   //   input = endDateInput;
-  //   //   return input;
-  //   // });
-
-  //   // setLocationInput(input => {
-  //   //   input = locationInput;
-  //   //   return input;
-  //   // });
-
-  //     // console.log(schoolNameInput);
-  //     // console.log(degreeInput);
-  //     // console.log(startDateInput);
-  //     // console.log(endDateInput);
-  //     // console.log(locationInput);
-
-  //        const updatedObj = {
-  //         schoolNameInput: schoolNameInput,
-  //         degreeInput: degreeInput,
-  //         startDateInput: startDateInput,
-  //         endDateInput: endDateInput,
-  //         locationInput: locationInput,
-  //        }
-
-  //        console.log('UPDATED OBJECT AFTER PRESSING SAVE', updatedObj);
-  //       //  console.log('COPY OF THE UPDATED ARRAY, WITHIN HANDLESAVE', educationFormCopy);
-
-  //        setEducationForm([updatedObj]);
-
-  // } 
-
 
   function handleDelete(e) {
     let clickedOnEntry = e.target.name;
@@ -173,13 +109,7 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
         </form>
 
         <div className="education-form-content">
-          {/* <h3>{educationForm.schoolNameInput}</h3>
-          <h3>{educationForm.degreeInput}</h3>
-          <h3>{educationForm.startDateInput}</h3>
-          <h3>{educationForm.endDateInput}</h3>
-          <h3>{educationForm.locationInput}</h3> */}
           {educationForm.map(item => {
-            console.log('COPY OF THE UPDATED ARRAY, WITHIN RETURN', educationForm);
             return (
               <div key={item.keyForm} className="education-content-below-form">
                 <h3>{item.schoolNameInput}</h3>
@@ -187,7 +117,6 @@ export default function Education({ handleSubmit, educationForm, setEducationFor
                 <h3>
                   {item.startDateInput} - {item.endDateInput}
                 </h3>
-                {/* <h3>{item.endDateInput}</h3> */}
                 <h3>{item.degreeInput}</h3>
 
                 <div className="education-btns-container-below-form">

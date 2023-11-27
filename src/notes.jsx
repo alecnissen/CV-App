@@ -618,6 +618,23 @@
 // time for fonts 
 // data formatting 
 
+
+// *** 
+
 // remove all commented out code, 
 // look over everything, 
 // begin deployment process
+
+
+// 11/27
+// remove the commented out code, 
+// play around with the linear gradient background colors, // I'll keep the background color 
+// test everything again, // edit btn/delete btn is working ok, when an edit is made with multiple entries, it will moved to the bottom, that is the only bug or strange behavior
+// do a code review, understand the code and review everything, 
+// begin deployment process, 
+// you are a bad motherfucker for finishing this app and not giving up \
+
+// commit and review changes, commit them do code review on this whole project, then deploy, 
+// I feel statisfed with everything, 
+
+// commit msg, removed commented out code in css file, along with adding a linear gradient background color

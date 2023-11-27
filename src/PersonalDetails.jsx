@@ -51,7 +51,6 @@ export default function PersonalDetails({
           className="hide-show-content-personal-details"
           style={showed ? { display: 'none' } : { display: 'flex' }}
         >
-          {/* <form> */}
           <label>Full Name: </label>
           <input
             type="text"
@@ -96,10 +95,6 @@ export default function PersonalDetails({
         </form>
 
         <div>
-          {/* <h3>{personalDetailsForm.inputName}</h3>
-          <h3>{personalDetailsForm.inputEmail}</h3>
-          <h3>{personalDetailsForm.inputAddress}</h3>
-          <h3>{personalDetailsForm.inputPhone}</h3> */}
           {personalDetailsForm.map(item => {
             return (
               <div key={item.keyForm} className="personal-details-form-content">

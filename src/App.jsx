@@ -1,7 +1,6 @@
 import './App.css';
 import PersonalDetails from './PersonalDetails';
 import Education from './Education';
-// import Header from './Header';
 import ProfessionalExperience from './ProfessionalExperience';
 import EducationCVComponent from './EducationCVComponent';
 import PersonalDetailsCVComponent from './PersonalDetailsCVComponent.jsx';

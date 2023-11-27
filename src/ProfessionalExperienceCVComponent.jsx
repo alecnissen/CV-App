@@ -12,7 +12,6 @@ export default function ProfessionalExperienceCVComponent({ experienceForm }) {
                 <h3>
                   {item.inputStartDate} - {item.inputEndDate}
                 </h3>
-                {/* <h3>{item.inputEndDate}</h3> */}
               </div>
 
               <div className="experience-content-container-description">
