@@ -70,7 +70,7 @@ export default function App() {
         <h1 className="main-header">CV/Resume Generator</h1>
       </div>
       <div id="form">
-        <PersonalDetails
+        <PersonalDetails 
           handleSubmit={handleSubmitPersonal}
           personalDetailsForm={personalDetailsForm}
           setPersonalDetailsForm={setPersonalDetailsForm}
