@@ -1,4 +1,4 @@
-<h1>About This Project</h1> This was part of The Odin Project's course. It is the first react project. I wanted to make this a portfolio piece because it highlights my ability to apply basic react concepts such as state, props, components, using short circuit conditionals, and getting used to JSX as well. Other features I implemented in this project were dropdown menu's, ability for the user to edit and delete entries as well as being able to add multiple entries for education and experience sections. 
+<h1>About This Project</h1> The CV app project was created to simplify the process of writing CVs. I wanted to make this project because it highlights my ability to apply react concepts such as state, props, components, using short circuit conditionals, and writing JSX code cleanly. Additional features implemented include a dropdown menu, the ability for the user to update and delete entries, and to add multiple entries for education and experience sections.
 
 <br> 
 
@@ -8,12 +8,14 @@
     <li>Passing props between components</li>
     <li>Practice using React hooks such as useState</li>
     <li>How to correctly modify and update state in React</li>
+    <li>Perseverance and sticking it out to the end!</li>
     </ul>
 <br> 
- <h1>Build With</h1>
+ <h1>Built With</h1>
 
  
  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+ ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
 
@@ -27,7 +29,7 @@ then ``` npm install ``` which will install all dependency's and packages.
 
 <h1>Features</h1>
 
-- Dropdown menu's for each section
+- Dropdown menus for each section
 
     <img src=Icons/cv-app-read-me-description.png style="width: 300px">
 
