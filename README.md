@@ -10,7 +10,7 @@
     <li>How to correctly modify and update state in React</li>
     <li>Perseverance and sticking it out to the end!</li>
     </ul>
-<br> 
+
  <h1>Built With</h1>
 
  
