@@ -1,4 +1,4 @@
-<h1>About This Project</h1> The CV app project was created to simplify the process of writing CVs. I wanted to make this project because it highlights my ability to apply react concepts such as state, props, components, using short circuit conditionals, and writing JSX code cleanly. Additional features implemented include a dropdown menu, the ability for the user to update and delete entries, and to add multiple entries for education and experience sections.
+<h1>About This Project</h1> The goal of this project is to simplify the process of writing CVs. I wanted to make this project because it highlights my ability to apply react concepts such as state, props, components, using short circuit conditionals, and writing JSX code cleanly. Additional features implemented include a dropdown menu, the ability for the user to update and delete entries, and to add multiple entries for education and experience sections
 
 <br> 
 
